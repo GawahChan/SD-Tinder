@@ -1,12 +1,12 @@
 .card {
     border-radius: 10px;
-    box-shadow: 2px 2px #DDDDDD;
+    border: 1px solid #DDDDDD;
     overflow: hidden;
-    width: 500px;
+    width: 300px;
     
 }
 
-.card img{
+.card-img img{
     width: 100%;
 }
 
@@ -16,6 +16,7 @@
 
 .card-bio h1 {
     margin: 0;
+    font-weight: 400;
 }
 
 .card-bio p {
@@ -25,12 +26,20 @@
 .card-actions {
     display: flex;
     justify-content: center;
+    padding: 1rem;
 }
 
 .card-actions button {
-    border-radius: 100%;
-    margin: 10px;
-    padding: 15px;
     background: none;
+    border: 2px solid #DDDDDD;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 5px;
+    height: 3rem;
+    width: 3rem;
     outline: 0;
+}
+
+.card-actions img {
+    vertical-align: middle;
 }
