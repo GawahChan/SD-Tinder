@@ -1,0 +1,36 @@
+.card {
+    border-radius: 10px;
+    box-shadow: 2px 2px #DDDDDD;
+    overflow: hidden;
+    width: 500px;
+    
+}
+
+.card img{
+    width: 100%;
+}
+
+.card-bio {
+    padding-left: 10px;
+}
+
+.card-bio h1 {
+    margin: 0;
+}
+
+.card-bio p {
+    margin: 0;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.card-actions button {
+    border-radius: 100%;
+    margin: 10px;
+    padding: 15px;
+    background: none;
+    outline: 0;
+}

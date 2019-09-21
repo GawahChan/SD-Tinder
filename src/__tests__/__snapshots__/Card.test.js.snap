@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component renders correctly 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-img"
+  >
+    <img
+      alt="Profile"
+      src="Mila Kunis.jpg"
+    />
+  </div>
+  <div
+    className="card-bio"
+  >
+    <h1>
+      Mila Kunis
+      , 
+      age
+    </h1>
+    <p>
+      location
+    </p>
+    <p>
+      bio
+    </p>
+  </div>
+  <div
+    className="card-actions"
+  >
+    <button>
+      <img
+        alt="Dislike"
+        src="Dislike.svg"
+      />
+    </button>
+    <button>
+      <img
+        alt="Superlike"
+        src="SuperLike.svg"
+      />
+    </button>
+    <button>
+      <img
+        alt="Like"
+        src="Like.svg"
+      />
+    </button>
+  </div>
+</div>
+`;
