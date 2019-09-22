@@ -42,7 +42,9 @@ exports[`Card Component renders correctly 1`] = `
         src="SuperLike.svg"
       />
     </button>
-    <button>
+    <button
+      onClick={[Function]}
+    >
       <img
         alt="Like"
         src="Like.svg"

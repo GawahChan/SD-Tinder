@@ -19,7 +19,7 @@ function Card(props) {
             <div className='card-actions'>
                 <button><img src={Dislike} alt='Dislike' /></button>
                 <button><img src={Superlike} alt='Superlike' /></button>
-                <button><img src={Like} alt='Like' /></button>
+                <button onClick={() => props.liked(props.id)}><img src={Like} alt='Like' /></button>
             </div>
         </div>
     );

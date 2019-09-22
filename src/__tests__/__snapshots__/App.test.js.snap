@@ -2,17 +2,37 @@
 
 exports[`App renders correctly 1`] = `
 <div
-  className="App"
+  className="app"
 >
   <h1>
-    Stunt double App
+    Stunt Double App
   </h1>
   <Card
-    age="30"
-    bio="aspiring milf"
+    age="36"
+    bio="Actress"
+    id={0}
     key="0"
-    location="LA"
+    liked={[Function]}
+    location="LA, USA"
     name="Mila Kunis"
+  />
+  <Card
+    age="29"
+    bio="Actress"
+    id={1}
+    key="1"
+    liked={[Function]}
+    location="Kentucky, USA"
+    name="Jennifer Lawrence"
+  />
+  <Card
+    age="29"
+    bio="Actress"
+    id={2}
+    key="2"
+    liked={[Function]}
+    location="Oxford, UK"
+    name="Emma Watson"
   />
 </div>
 `;
