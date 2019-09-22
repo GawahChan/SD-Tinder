@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Deck component renders correctly 1`] = `
+<div
+  className="app"
+>
+  <h1>
+    Stunt Double App
+  </h1>
+  <Card
+    age="36"
+    bio="Actress"
+    id={0}
+    key="0"
+    liked={[Function]}
+    location="LA, USA"
+    name="Mila Kunis"
+  />
+  <Card
+    age="29"
+    bio="Actress"
+    id={1}
+    key="1"
+    liked={[Function]}
+    location="Kentucky, USA"
+    name="Jennifer Lawrence"
+  />
+  <Card
+    age="29"
+    bio="Actress"
+    id={2}
+    key="2"
+    liked={[Function]}
+    location="Oxford, UK"
+    name="Emma Watson"
+  />
+</div>
+`;
