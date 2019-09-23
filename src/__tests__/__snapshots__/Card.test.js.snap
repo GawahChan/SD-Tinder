@@ -30,19 +30,26 @@ exports[`Card Component renders correctly 1`] = `
     <div
       className="card-actions"
     >
-      <button>
+      <button
+        className="disliked"
+        onClick={[Function]}
+      >
         <img
           alt="Dislike"
           src="Dislike.svg"
         />
       </button>
-      <button>
+      <button
+        className="superliked"
+        onClick={[Function]}
+      >
         <img
           alt="Superlike"
           src="SuperLike.svg"
         />
       </button>
       <button
+        className="liked"
         onClick={[Function]}
       >
         <img

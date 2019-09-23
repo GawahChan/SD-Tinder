@@ -15,13 +15,13 @@ function Card(props) {
                     <p>{props.bio}</p>
                 </div>
                 <div className='card-actions'>
-                    <button>
+                    <button className='disliked' onClick={(e) => props.handleAction(props.id, e.currentTarget.className)}>
                         <img src={Dislike} alt='Dislike' />
                     </button>
-                    <button>
+                    <button className='superliked' onClick={(e) => props.handleAction(props.id, e.currentTarget.className)}>
                         <img src={Superlike} alt='Superlike' />
                     </button>
-                    <button onClick={() => props.liked(props.id)}>
+                    <button className='liked' onClick={(e) => props.handleAction(props.id, e.currentTarget.className)}>
                         <img src={Like} alt='Like' />
                     </button>
                 </div>

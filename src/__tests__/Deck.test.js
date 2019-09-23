@@ -1,32 +1,98 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Deck from '../Components/Deck/Deck';
+import Data from '../Data';
 
 describe('Deck component', () => {
     const deck = shallow(<Deck />);
-    const id = 0;
-    const profile = { id: 0, name: 'Mila Kunis', img: 'Mila-Kunis', age: '36', location: 'LA, USA', bio: 'Actress' }
+
 
     it('renders correctly', () => {
         expect(deck).toMatchSnapshot();
     })
 
-    it('initializes the liked `state` with an empty array', () => {
+    it('initializes the `stuntDoubleList` state with Data', () => {
+        expect(deck.state('stuntDoubleList')).toEqual(Data);
+    })
+
+    it('initializes the `disliked` state with an empty array', () => {
+        expect(deck.state('disliked')).toEqual([]);
+    })
+
+    it('initializes the `superliked` state with an empty array', () => {
+        expect(deck.state('superliked')).toEqual([]);
+    })
+
+    it('initializes the `liked` state with an empty array', () => {
         expect(deck.state('liked')).toEqual([]);
     })
 
-    describe('user Likes a profile', () => {
-        beforeEach(() => {
-            deck.instance().liked(id);
+    describe('user clicks on an action', () => {
+        const id = 0;
+        const profile = { id: 0, name: 'Mila Kunis', img: 'Mila-Kunis', age: '36', location: 'LA, USA', bio: 'Actress' }
+
+        describe('user likes a profile', () => {
+            const action = 'liked'
+
+            beforeEach(() => {
+                deck.instance().handleAction(id, action);
+            });
+
+            afterEach(() => {
+                deck.setState({liked: [], stuntDoubleList: Data });
+            });
+
+            it('adds profile to the state `liked`', () => {
+                expect(deck.state('liked')).toHaveLength(1);
+                expect(deck.state('liked')).toContainEqual(profile);
+            });
+
+            it('removes profile from the state `stuntDoubleList`', () => {
+                expect(deck.state('stuntDoubleList')).not.toContain(profile);
+            });
         });
 
-        it('adds the liked profile to the state `liked`', () => {
-            expect(deck.state('liked')).toHaveLength(1);
-            expect(deck.state('liked')).toContainEqual(profile);
+        describe('user superlikes a profile', () => {
+            const action = 'superliked';
+
+            beforeEach(() => {
+                deck.instance().handleAction(id, action);
+            });
+
+            afterEach(() => {
+                deck.setState({superliked: [], stuntDoubleList: Data });
+            });
+
+            it('adds profile to the state `superliked`', () => {
+                expect(deck.state('superliked')).toHaveLength(1);
+                expect(deck.state('superliked')).toContainEqual(profile);
+            });
+
+            it('removes profile from the state `stuntDoubleList`', () => {
+                expect(deck.state('stuntDoubleList')).not.toContain(profile);
+            });
         });
 
-        it('removes the liked profile from the state `stuntDoubleList`', () => {
-            expect(deck.state('stuntDoubleList')).not.toContain(profile)
+        describe('user dislikes a profile', () => {
+            const action = 'disliked';
+
+            beforeEach(() => {
+                deck.instance().handleAction(id, action);
+            });
+
+            afterEach(() => {
+                deck.setState({disliked: [], stuntDoubleList: Data });
+            });
+
+            it('adds profile to the state `superliked`', () => {
+                expect(deck.state('disliked')).toHaveLength(1);
+                expect(deck.state('disliked')).toContainEqual(profile);
+            });
+
+            it('removes profile from the state `stuntDoubleList`', () => {
+                expect(deck.state('stuntDoubleList')).not.toContain(profile);
+            });
         });
+
     })
 })

@@ -3,7 +3,6 @@ import Card from '../Card/Card';
 import Data from '../../Data.js';
 
 import './Deck.css';
-
 class Deck extends Component {
   constructor() {
     super();
@@ -15,14 +14,18 @@ class Deck extends Component {
     }
   }
 
-  liked = (id) => {
-    let liked = [...this.state.liked];
-    let filtered = this.state.stuntDoubleList.find(stuntDouble => stuntDouble.id === id);
-    liked.unshift(filtered)
+  handleAction = (id, action) => {
 
-    let stuntDoubleList = this.state.stuntDoubleList.filter(stuntDouble => stuntDouble.id !== id);
+    let actionState = [...this.state[action]];
+    let filtered = this.state.stuntDoubleList.find(stuntDouble => stuntDouble.id === id);
+    actionState.unshift(filtered)
+
+    let stuntDoubleList = this.state.stuntDoubleList.filter(stuntDouble => stuntDouble.id !== id); 
     
-    this.setState({ stuntDoubleList, liked });
+    this.setState({
+      [action]: actionState,
+      stuntDoubleList
+    });
   }
 
   render() {
@@ -39,7 +42,7 @@ class Deck extends Component {
                 age={stuntDouble.age}
                 location={stuntDouble.location}
                 bio={stuntDouble.bio}
-                liked={this.liked}
+                handleAction={this.handleAction}
               />
             );
           })

@@ -7,30 +7,30 @@ exports[`Deck component renders correctly 1`] = `
   <Card
     age="36"
     bio="Actress"
+    handleAction={[Function]}
     id={0}
     img="Mila-Kunis"
     key="0"
-    liked={[Function]}
     location="LA, USA"
     name="Mila Kunis"
   />
   <Card
     age="29"
     bio="Actress"
+    handleAction={[Function]}
     id={1}
     img="Jennifer-Lawrence"
     key="1"
-    liked={[Function]}
     location="Kentucky, USA"
     name="Jennifer Lawrence"
   />
   <Card
     age="29"
     bio="Actress"
+    handleAction={[Function]}
     id={2}
     img="Emma-Watson"
     key="2"
-    liked={[Function]}
     location="Oxford, UK"
     name="Emma Watson"
   />
