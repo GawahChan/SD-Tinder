@@ -12,6 +12,10 @@ describe('Card Component', () => {
         expect(card).toMatchSnapshot();
     });
 
+    it('initialises the `display bio` state as false', () => {
+        expect(card.state('displayBio')).toBe(false);
+    });
+
     describe('user clicks an action button', () => {
         afterEach(() => {
             mockHandleAction.mockClear();
@@ -34,5 +38,18 @@ describe('Card Component', () => {
 
             expect(mockHandleAction).toHaveBeenCalledTimes(1);
         });
-    })
-})
+    });
+
+    describe('toggleBio event handler', () => {
+        beforeEach(() => {
+            card.instance().toggleBio();
+        })
+
+        afterEach(() => {
+            card.setState({displayBio: false});
+        })
+        it('toggles the `displayBio` state', () => {
+            expect(card.state('displayBio')).toBe(true);
+        });
+    });
+});

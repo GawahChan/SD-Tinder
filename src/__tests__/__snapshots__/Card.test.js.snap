@@ -12,20 +12,25 @@ exports[`Card Component renders correctly 1`] = `
   <div
     className="card-content"
   >
+    <h1>
+      Mila Kunis
+      , 
+      age
+    </h1>
     <div
-      className="card-bio"
+      className="card-subtitle"
     >
-      <h1>
-        Mila Kunis
-        , 
-        age
-      </h1>
       <p>
         location
       </p>
-      <p>
-        bio
-      </p>
+      <button
+        onClick={[Function]}
+      >
+        <img
+          alt="Info"
+          src="info.svg"
+        />
+      </button>
     </div>
     <div
       className="card-actions"
