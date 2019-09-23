@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultCard component renders correctly 1`] = `
+<div
+  className="result-card"
+  style={
+    Object {
+      "backgroundImage": "url(Jennifer-Lawrence.jpg)",
+    }
+  }
+>
+  <div
+    className="result-card-title"
+  >
+    <h2>
+      Jennifer Lawrence
+    </h2>
+  </div>
+</div>
+`;

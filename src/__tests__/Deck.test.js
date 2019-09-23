@@ -39,7 +39,7 @@ describe('Deck component', () => {
             });
 
             afterEach(() => {
-                deck.setState({liked: [], stuntDoubleList: Data });
+                deck.setState({ liked: [], stuntDoubleList: Data });
             });
 
             it('adds profile to the state `liked`', () => {
@@ -60,7 +60,7 @@ describe('Deck component', () => {
             });
 
             afterEach(() => {
-                deck.setState({superliked: [], stuntDoubleList: Data });
+                deck.setState({ superliked: [], stuntDoubleList: Data });
             });
 
             it('adds profile to the state `superliked`', () => {
@@ -81,7 +81,7 @@ describe('Deck component', () => {
             });
 
             afterEach(() => {
-                deck.setState({disliked: [], stuntDoubleList: Data });
+                deck.setState({ disliked: [], stuntDoubleList: Data });
             });
 
             it('adds profile to the state `superliked`', () => {
@@ -93,6 +93,18 @@ describe('Deck component', () => {
                 expect(deck.state('stuntDoubleList')).not.toContain(profile);
             });
         });
+    });
 
-    })
-})
+    describe('when user finishes going through the profiles', () => {
+        beforeEach(() => {
+            deck.setState({ stuntDoubleList: [] });
+        });
+        afterEach(() => {
+            deck.setState({ stuntDoubleList: Data });
+        });
+        
+        it('renders <Results/> component', () => {
+            expect(deck.find('.deck').children('Result').length).toEqual(1);
+        });
+    });
+});

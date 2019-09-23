@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result component renders correctly 1`] = `
+<div
+  className="result"
+>
+  <h1>
+    There's no one new around you
+  </h1>
+  <div
+    className="result-superliked"
+  >
+    <h2>
+      People you Superliked!
+    </h2>
+    <div
+      className="result-profiles superliked"
+    >
+      <ResultCard
+        img="Mila-Kunis"
+        key="1"
+        name="Mila Kunis"
+      />
+    </div>
+  </div>
+  <div
+    className="result-liked"
+  >
+    <h2>
+      People you liked... let's hope they like you too!
+    </h2>
+    <div
+      className="result-profiles liked"
+    >
+      <ResultCard
+        img="Rosie-Mac"
+        key="0"
+        name="Rosie Mac"
+      />
+    </div>
+  </div>
+  <div
+    className="result-disliked"
+  >
+    <h2>
+      People you disliked
+    </h2>
+    <div
+      className="result-profiles disliked"
+    >
+      <ResultCard
+        img="Alicia-Vela-Bailey"
+        key="2"
+        name="Alicia Vela-Bailey"
+      />
+    </div>
+  </div>
+</div>
+`;
