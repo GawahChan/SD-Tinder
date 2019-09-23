@@ -5,34 +5,44 @@ exports[`Deck component renders correctly 1`] = `
   className="deck"
 >
   <Card
-    age="36"
-    bio="Actress"
+    age="22"
+    bio="Rode 3 dragons, led the Dothraki and commanded the Unsullied. I was Emilia Clarks stunt double for Season 5 Game of Thrones"
     handleAction={[Function]}
     id={0}
-    img="Mila-Kunis"
+    img="Rosie-Mac"
     key="0"
+    location="Newcastle, UK"
+    name="Rosie Mac"
+  />
+  <Card
+    age="36"
+    bio="Actress who loves doing her own stunts! Check out my work from 'Jupiter Ascending' and 'The Spy Who Dumped Me"
+    handleAction={[Function]}
+    id={1}
+    img="Mila-Kunis"
+    key="1"
     location="LA, USA"
     name="Mila Kunis"
   />
   <Card
-    age="29"
-    bio="Actress"
+    age="28"
+    bio="From superheroines to supervillians, I can do a range of stunts. Recently finished doubling for Gal Gadot and am looking for my next gig"
     handleAction={[Function]}
-    id={1}
-    img="Jennifer-Lawrence"
-    key="1"
-    location="Kentucky, USA"
-    name="Jennifer Lawrence"
+    id={2}
+    img="Alicia-Vela-Bailey"
+    key="2"
+    location="LA, USA"
+    name="Alicia Vela-Bailey"
   />
   <Card
     age="29"
-    bio="Actress"
+    bio="Champion of the 74th Hunger Games! Expert level with a bow and arrow as well as very capable of doing all my own stunts!"
     handleAction={[Function]}
-    id={2}
-    img="Emma-Watson"
-    key="2"
-    location="Oxford, UK"
-    name="Emma Watson"
+    id={3}
+    img="Jennifer-Lawrence"
+    key="3"
+    location="Kentucky, USA"
+    name="Jennifer Lawrence"
   />
 </div>
 `;

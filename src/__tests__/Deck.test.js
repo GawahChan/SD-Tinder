@@ -29,7 +29,7 @@ describe('Deck component', () => {
 
     describe('user clicks on an action', () => {
         const id = 0;
-        const profile = { id: 0, name: 'Mila Kunis', img: 'Mila-Kunis', age: '36', location: 'LA, USA', bio: 'Actress' }
+        const profile = Data[0]
 
         describe('user likes a profile', () => {
             const action = 'liked'
@@ -43,8 +43,8 @@ describe('Deck component', () => {
             });
 
             it('adds profile to the state `liked`', () => {
-                expect(deck.state('liked')).toHaveLength(1);
-                expect(deck.state('liked')).toContainEqual(profile);
+                expect(deck.state(action)).toHaveLength(1);
+                expect(deck.state(action)).toContainEqual(profile);
             });
 
             it('removes profile from the state `stuntDoubleList`', () => {
@@ -64,8 +64,8 @@ describe('Deck component', () => {
             });
 
             it('adds profile to the state `superliked`', () => {
-                expect(deck.state('superliked')).toHaveLength(1);
-                expect(deck.state('superliked')).toContainEqual(profile);
+                expect(deck.state(action)).toHaveLength(1);
+                expect(deck.state(action)).toContainEqual(profile);
             });
 
             it('removes profile from the state `stuntDoubleList`', () => {
@@ -85,8 +85,8 @@ describe('Deck component', () => {
             });
 
             it('adds profile to the state `superliked`', () => {
-                expect(deck.state('disliked')).toHaveLength(1);
-                expect(deck.state('disliked')).toContainEqual(profile);
+                expect(deck.state(action)).toHaveLength(1);
+                expect(deck.state(action)).toContainEqual(profile);
             });
 
             it('removes profile from the state `stuntDoubleList`', () => {
