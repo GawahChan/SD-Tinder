@@ -3,53 +3,54 @@
 exports[`Card Component renders correctly 1`] = `
 <div
   className="card"
+  style={
+    Object {
+      "backgroundImage": "url(Mila-Kunis.jpg)",
+    }
+  }
 >
   <div
-    className="card-img"
+    className="card-content"
   >
-    <img
-      alt="Profile"
-      src="Mila Kunis.jpg"
-    />
-  </div>
-  <div
-    className="card-bio"
-  >
-    <h1>
-      Mila Kunis
-      , 
-      age
-    </h1>
-    <p>
-      location
-    </p>
-    <p>
-      bio
-    </p>
-  </div>
-  <div
-    className="card-actions"
-  >
-    <button>
-      <img
-        alt="Dislike"
-        src="Dislike.svg"
-      />
-    </button>
-    <button>
-      <img
-        alt="Superlike"
-        src="SuperLike.svg"
-      />
-    </button>
-    <button
-      onClick={[Function]}
+    <div
+      className="card-bio"
     >
-      <img
-        alt="Like"
-        src="Like.svg"
-      />
-    </button>
+      <h1>
+        Mila Kunis
+        , 
+        age
+      </h1>
+      <p>
+        location
+      </p>
+      <p>
+        bio
+      </p>
+    </div>
+    <div
+      className="card-actions"
+    >
+      <button>
+        <img
+          alt="Dislike"
+          src="Dislike.svg"
+        />
+      </button>
+      <button>
+        <img
+          alt="Superlike"
+          src="SuperLike.svg"
+        />
+      </button>
+      <button
+        onClick={[Function]}
+      >
+        <img
+          alt="Like"
+          src="Like.svg"
+        />
+      </button>
+    </div>
   </div>
 </div>
 `;

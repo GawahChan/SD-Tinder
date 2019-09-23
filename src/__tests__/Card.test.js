@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import Card from '../Components/Card/Card';
 
 describe('Card Component', () => {
-    const props = {id: 0, name: 'Mila Kunis', age: 'age', location:'location', bio:'bio' }
+    const props = {id: 0, name: 'Mila Kunis', img: 'Mila-Kunis', age: 'age', location:'location', bio:'bio' }
     const card = shallow(<Card {...props} />);
 
 

@@ -1,31 +1,34 @@
 .card {
+    position: absolute; 
     border-radius: 10px;
-    border: 1px solid #DDDDDD;
-    overflow: hidden;
     width: 300px;
+    height: 500px;
+    background-position: top;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
 }
 
-.card-img img{
-    width: 100%;
+.card-content {
+    padding: 1rem;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    color: #DDDDDD
 }
 
-.card-bio {
-    padding-left: 10px;
-}
-
-.card-bio h1 {
+.card-content h1 {
     margin: 0;
     font-weight: 400;
 }
 
-.card-bio p {
+.card-content p {
     margin: 0;
 }
 
 .card-actions {
     display: flex;
     justify-content: center;
-    padding: 1rem;
 }
 
 .card-actions button {

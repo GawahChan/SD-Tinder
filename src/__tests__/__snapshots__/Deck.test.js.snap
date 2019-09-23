@@ -2,15 +2,13 @@
 
 exports[`Deck component renders correctly 1`] = `
 <div
-  className="app"
+  className="deck"
 >
-  <h1>
-    Stunt Double App
-  </h1>
   <Card
     age="36"
     bio="Actress"
     id={0}
+    img="Mila-Kunis"
     key="0"
     liked={[Function]}
     location="LA, USA"
@@ -20,6 +18,7 @@ exports[`Deck component renders correctly 1`] = `
     age="29"
     bio="Actress"
     id={1}
+    img="Jennifer-Lawrence"
     key="1"
     liked={[Function]}
     location="Kentucky, USA"
@@ -29,6 +28,7 @@ exports[`Deck component renders correctly 1`] = `
     age="29"
     bio="Actress"
     id={2}
+    img="Emma-Watson"
     key="2"
     liked={[Function]}
     location="Oxford, UK"
