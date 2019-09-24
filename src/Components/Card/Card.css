@@ -31,9 +31,35 @@
     margin: 0;
 }
 
+/*Display Action Overlay CSS */
+.display-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.display-action h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.display-action.liked{
+    color: #4bb12c;
+}
+
+.display-action.superliked{
+    color: #09cfcf
+}
+
+.display-action.disliked{
+    color: #ff0000
+}
+
+/*Card contents CSS*/
 .card-content {
     padding: 1rem;
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7), rgba(0,0,0,1));
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7),rgba(0,0,0,0.9), rgba(0,0,0,1));
     color: #DDDDDD
 }
 
@@ -66,21 +92,19 @@
 }
 
 /*Event handler CSS */
-
 .card.liked {
-    box-shadow: 2px 2px 50px #4bb12c
+    box-shadow: 5px 5px 100px 15px #4bb12c;
 }
 
 .card.disliked {
-    box-shadow: 2px 2px 50px #ff0000
+    box-shadow: 5px 5px 100px 15px #ff0000
 }
 
 .card.superliked {
-    box-shadow: 2px 2px 50px #09cfcf
+    box-shadow: 5px 5px 100px 15px #09cfcf
 }
 
 /*Animations */
-
 .card button:hover {
     animation: pulse 3s infinite;
 }

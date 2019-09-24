@@ -2,6 +2,12 @@
 
 exports[`Card Component renders correctly 1`] = `
 <ForwardRef(MotionComponent)
+  animate={
+    Object {
+      "x": 0,
+      "y": 0,
+    }
+  }
   className="card "
   drag={true}
   dragConstraints={
@@ -21,7 +27,17 @@ exports[`Card Component renders correctly 1`] = `
       "backgroundImage": "url(Alicia-Vela-Bailey.jpg)",
     }
   }
+  whileTap={
+    Object {
+      "scale": 0.9,
+    }
+  }
 >
+  <div
+    className="display-action "
+  >
+    <h1 />
+  </div>
   <div
     className="card-content"
   >

@@ -14,17 +14,16 @@ class Card extends Component {
         this.state = {
             displayBio: false,
             action: "",
+            removeCard: false
         }
     }
 
-    toggleBio = () => {
-        this.setState({ displayBio: !this.state.displayBio });
-    }
+    toggleBio = () => { this.setState({ displayBio: !this.state.displayBio }) }
 
     action = (id, actionName) => {
         this.props.handleAction(id, actionName);
 
-        this.setState({ action: actionName })
+        this.setState({ action: actionName, removeCard: actionName })
     }
 
     render() {
@@ -33,26 +32,31 @@ class Card extends Component {
                 className={`card ${this.state.action}`}
                 style={{ 'backgroundImage': `url(${require(`../../Common/Profile/${this.props.img}.jpg`)})` }}
                 key={this.props.id}
+                whileTap={{ scale: 0.9 }}
                 drag
                 dragElastic={0.5}
                 dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
-                onDrag={
-                    (event, info) => {
-                        if (info.point.x > 40) this.setState({ action: 'liked' })
-                        else if (info.point.x < -40) this.setState({ action: 'disliked' })
-                        else if (info.point.y < -40) this.setState({ action: 'superliked' })
-                        else this.setState({ action: '' })
-                    }
-                }
-                onDragEnd={
-                    (event, info) => {
-                        if (info.point.x > 130) this.action(this.props.id, 'liked')
-                        else if (info.point.x < -130) this.action(this.props.id, 'disliked')
-                        else if (info.point.y < -130) this.action(this.props.id, 'superliked')
-                        else this.setState({ action: '' })
-                    }
-                }
-            >
+                onDrag={(event, info) => {
+                    if (info.point.x > 40) this.setState({ action: 'liked' })
+                    else if (info.point.x < -40) this.setState({ action: 'disliked' })
+                    else if (info.point.y < -40) this.setState({ action: 'superliked' })
+                    else this.setState({ action: '' })
+                }}
+                onDragEnd={(event, info) => {
+                    if (info.point.x > 130) this.action(this.props.id, 'liked')
+                    else if (info.point.x < -130) this.action(this.props.id, 'disliked')
+                    else if (info.point.y < -130) this.action(this.props.id, 'superliked')
+                    else this.setState({ action: '' })
+                }}
+                animate={
+                    this.state.removeCard === 'liked' ? { x: 500, opacity: 0} :
+                        this.state.removeCard === 'disliked' ? { x: -500, opacity: 0 } :
+                            this.state.removeCard === 'superliked' ? { y: -500, opacity: 0} :
+                                { x: 0, y: 0 }
+                }>
+                <div className={`display-action ${this.state.action}`}>
+                    <h1>{this.state.action.toUpperCase()}</h1>
+                </div>
                 <div className='card-content'>
                     <h1>{this.props.name}, {this.props.age}</h1>
                     <div className='card-subtitle'>
@@ -79,7 +83,7 @@ class Card extends Component {
                         </button>
                     </div>
                 </div>
-            </motion.div>
+            </motion.div >
         );
     }
 }

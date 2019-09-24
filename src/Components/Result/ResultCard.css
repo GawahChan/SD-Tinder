@@ -11,8 +11,8 @@
     flex-direction: column;
     justify-content: flex-end;
     
-    min-width: 200px;
-    min-height: 200px;
+    min-width: 250px;
+    min-height: 250px;
 }
 
 .result-card-title {
@@ -25,5 +25,4 @@
 .result-card-title h2 {
     margin: 0;
     font-weight: 400;
-    font-size: 1.5rem;
 }
