@@ -1,8 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card Component renders correctly 1`] = `
-<div
+<ForwardRef(MotionComponent)
   className="card "
+  drag={true}
+  dragConstraints={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+    }
+  }
+  dragElastic={0.5}
+  key="0"
+  onDrag={[Function]}
+  onDragEnd={[Function]}
   style={
     Object {
       "backgroundImage": "url(Mila-Kunis.jpg)",
@@ -64,5 +77,5 @@ exports[`Card Component renders correctly 1`] = `
       </button>
     </div>
   </div>
-</div>
+</ForwardRef(MotionComponent)>
 `;

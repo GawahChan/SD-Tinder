@@ -14,6 +14,7 @@
     width: 320px;
     height: 500px;
 
+    transition: box-shadow 0.5s
 }
 
 .card img {
@@ -67,43 +68,25 @@
 /*Event handler CSS */
 
 .card.liked {
-    animation: liked-shadow 0.5s;
+    box-shadow: 2px 2px 50px #4bb12c
 }
 
 .card.disliked {
-    animation: disliked-shadow 0.5s;
+    box-shadow: 2px 2px 50px #ff0000
 }
 
 .card.superliked {
-    animation: superliked-shadow 0.5s;
+    box-shadow: 2px 2px 50px #09cfcf
 }
 
 /*Animations */
 
 .card button:hover {
-    animation: pulse 1.5s infinite;
+    animation: pulse 3s infinite;
 }
 
 @keyframes pulse {
     0% { transform: scale(1)}
-    50% { transform: scale(1.2)}
+    50% { transform: scale(1.1)}
     100% {transform: scale(1)}
-}
-
-@keyframes liked-shadow {
-    0% { box-shadow: 2px 2px 20px #202020}
-    50% { box-shadow: 2px 2px 50px #4bb12c }
-    100% { box-shadow: 2px 2px 20px #202020}
-}
-
-@keyframes disliked-shadow {
-    0% { box-shadow: 2px 2px 20px #202020}
-    50% { box-shadow: 2px 2px 50px #ff0000 }
-    100% { box-shadow: 2px 2px 20px #202020}
-}
-
-@keyframes superliked-shadow {
-    0% { box-shadow: 2px 2px 20px #202020}
-    50% { box-shadow: 2px 2px 50px #09cfcf }
-    100% { box-shadow: 2px 2px 20px #202020}
 }

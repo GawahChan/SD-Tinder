@@ -4,6 +4,8 @@ import Superlike from '../../Common/Icons/SuperLike.svg';
 import Like from '../../Common/Icons/Like.svg';
 import Info from '../../Common/Icons/info.svg';
 
+import { motion } from 'framer-motion';
+
 import './Card.css';
 
 class Card extends Component {
@@ -22,13 +24,35 @@ class Card extends Component {
     action = (id, actionName) => {
         this.props.handleAction(id, actionName);
 
-        this.setState({action: actionName})
+        this.setState({ action: actionName })
     }
 
     render() {
         return (
-            <div className={`card ${this.state.action}`}
-                style={{ 'backgroundImage': `url(${require(`../../Common/Profile/${this.props.img}.jpg`)})` }}>
+            <motion.div
+                className={`card ${this.state.action}`}
+                style={{ 'backgroundImage': `url(${require(`../../Common/Profile/${this.props.img}.jpg`)})` }}
+                key={this.props.id}
+                drag
+                dragElastic={0.5}
+                dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+                onDrag={
+                    (event, info) => {
+                        if (info.point.x > 40) this.setState({ action: 'liked' })
+                        else if (info.point.x < -40) this.setState({ action: 'disliked' })
+                        else if (info.point.y < -40) this.setState({ action: 'superliked' })
+                        else this.setState({ action: '' })
+                    }
+                }
+                onDragEnd={
+                    (event, info) => {
+                        if (info.point.x > 130) this.action(this.props.id, 'liked')
+                        else if (info.point.x < -130) this.action(this.props.id, 'disliked')
+                        else if (info.point.y < -130) this.action(this.props.id, 'superliked')
+                        else this.setState({ action: '' })
+                    }
+                }
+            >
                 <div className='card-content'>
                     <h1>{this.props.name}, {this.props.age}</h1>
                     <div className='card-subtitle'>
@@ -55,7 +79,7 @@ class Card extends Component {
                         </button>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         );
     }
 }
