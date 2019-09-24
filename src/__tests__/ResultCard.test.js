@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import ResultCard from '../Components/Result/ResultCard';
 
 describe('ResultCard component', () => {
-    const props = { img: 'Jennifer-Lawrence', name: 'Jennifer Lawrence'}
+    const props = { img: 'Rosie-Mac', name: 'Rosie Mac'}
     const resultCard = shallow(<ResultCard {...props}/>)
 
     it('renders correctly', () => {

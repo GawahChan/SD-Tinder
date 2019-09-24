@@ -5,7 +5,7 @@ exports[`ResultCard component renders correctly 1`] = `
   className="result-card"
   style={
     Object {
-      "backgroundImage": "url(Jennifer-Lawrence.jpg)",
+      "backgroundImage": "url(Rosie-Mac.jpg)",
     }
   }
 >
@@ -13,7 +13,7 @@ exports[`ResultCard component renders correctly 1`] = `
     className="result-card-title"
   >
     <h2>
-      Jennifer Lawrence
+      Rosie Mac
     </h2>
   </div>
 </div>

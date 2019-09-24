@@ -18,7 +18,7 @@ exports[`Card Component renders correctly 1`] = `
   onDragEnd={[Function]}
   style={
     Object {
-      "backgroundImage": "url(Mila-Kunis.jpg)",
+      "backgroundImage": "url(Alicia-Vela-Bailey.jpg)",
     }
   }
 >
@@ -26,15 +26,15 @@ exports[`Card Component renders correctly 1`] = `
     className="card-content"
   >
     <h1>
-      Mila Kunis
+      Alicia Vela-Bailey
       , 
-      age
+      28
     </h1>
     <div
       className="card-subtitle"
     >
       <p>
-        location
+        LA, USA
       </p>
       <button
         onClick={[Function]}

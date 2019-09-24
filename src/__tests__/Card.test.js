@@ -1,12 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme'
 import Card from '../Components/Card/Card';
+import Data from '../Data';
 
 describe('Card Component', () => {
     const mockHandleAction = jest.fn()
-    const props = {id: 0, name: 'Mila Kunis', img: 'Mila-Kunis', age: 'age', location:'location', bio:'bio', handleAction: mockHandleAction }
+    const props = Data[0];
    
-    const card = shallow(<Card {...props} />);
+    const card = shallow(<Card {...props} handleAction = {mockHandleAction} />);
 
     it('renders correctly', () => {
         expect(card).toMatchSnapshot();

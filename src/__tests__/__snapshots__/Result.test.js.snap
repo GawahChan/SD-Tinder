@@ -17,9 +17,9 @@ exports[`Result component renders correctly 1`] = `
       className="result-profiles superliked"
     >
       <ResultCard
-        img="Mila-Kunis"
+        img="Richard-Cetrone"
         key="1"
-        name="Mila Kunis"
+        name="Richard Cetrone"
       />
     </div>
   </div>
@@ -33,9 +33,9 @@ exports[`Result component renders correctly 1`] = `
       className="result-profiles liked"
     >
       <ResultCard
-        img="Rosie-Mac"
+        img="Alicia-Vela-Bailey"
         key="0"
-        name="Rosie Mac"
+        name="Alicia Vela-Bailey"
       />
     </div>
   </div>
@@ -49,9 +49,9 @@ exports[`Result component renders correctly 1`] = `
       className="result-profiles disliked"
     >
       <ResultCard
-        img="Alicia-Vela-Bailey"
+        img="Renae-Moneymaker"
         key="2"
-        name="Alicia Vela-Bailey"
+        name="Renae Moneymaker"
       />
     </div>
   </div>
