@@ -44,7 +44,7 @@ class Card extends Component {
         return (
             xPosition > 130 ? this.action(this.props.id, 'liked') :
                 xPosition < -130 ? this.action(this.props.id, 'disliked') :
-                    yPosition < -40 ? this.action(this.props.id, 'superliked') : this.setState({ action: '' })
+                    yPosition < -130 ? this.action(this.props.id, 'superliked') : this.setState({ action: '' })
         );
     }
 
@@ -61,9 +61,9 @@ class Card extends Component {
                 onDrag={(event, info) => this.handleDrag(event, info)}
                 onDragEnd={(event, info) => this.handleDragEnd(event, info)}
                 animate={
-                    this.state.removeCard === 'liked' ? { x: 500, opacity: 0 } :
-                        this.state.removeCard === 'disliked' ? { x: -500, opacity: 0 } :
-                            this.state.removeCard === 'superliked' ? { y: -500, opacity: 0 } :
+                    this.state.removeCard === 'liked' ? { x: 300, opacity: 0 } :
+                        this.state.removeCard === 'disliked' ? { x: -300, opacity: 0 } :
+                            this.state.removeCard === 'superliked' ? { y: -300, opacity: 0 } :
                                 { x: 0, y: 0 }
                 }>
                 <div className={`display-action ${this.state.action}`}>
