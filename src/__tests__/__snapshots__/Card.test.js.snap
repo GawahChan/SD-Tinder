@@ -2,7 +2,7 @@
 
 exports[`Card Component renders correctly 1`] = `
 <div
-  className="card"
+  className="card "
   style={
     Object {
       "backgroundImage": "url(Mila-Kunis.jpg)",

@@ -10,7 +10,8 @@ class Card extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            displayBio: false
+            displayBio: false,
+            action: "",
         }
     }
 
@@ -18,9 +19,16 @@ class Card extends Component {
         this.setState({ displayBio: !this.state.displayBio });
     }
 
+    action = (id, actionName) => {
+        this.props.handleAction(id, actionName);
+
+        this.setState({action: actionName})
+    }
+
     render() {
         return (
-            <div className='card' style={{ 'backgroundImage': `url(${require(`../../Common/Profile/${this.props.img}.jpg`)})` }}>
+            <div className={`card ${this.state.action}`}
+                style={{ 'backgroundImage': `url(${require(`../../Common/Profile/${this.props.img}.jpg`)})` }}>
                 <div className='card-content'>
                     <h1>{this.props.name}, {this.props.age}</h1>
                     <div className='card-subtitle'>
@@ -36,13 +44,13 @@ class Card extends Component {
                         </div>
                     }
                     <div className='card-actions'>
-                        <button className='disliked' onClick={(e) => this.props.handleAction(this.props.id, e.currentTarget.className)}>
+                        <button className='disliked' onClick={(e) => this.action(this.props.id, e.currentTarget.className)}>
                             <img src={Dislike} alt='Dislike' />
                         </button>
-                        <button className='superliked' onClick={(e) => this.props.handleAction(this.props.id, e.currentTarget.className)}>
+                        <button className='superliked' onClick={(e) => this.action(this.props.id, e.currentTarget.className)}>
                             <img src={Superlike} alt='Superlike' />
                         </button>
-                        <button className='liked' onClick={(e) => this.props.handleAction(this.props.id, e.currentTarget.className)}>
+                        <button className='liked' onClick={(e) => this.action(this.props.id, e.currentTarget.className)}>
                             <img src={Like} alt='Like' />
                         </button>
                     </div>

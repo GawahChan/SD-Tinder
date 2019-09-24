@@ -30,12 +30,15 @@ describe('Deck component', () => {
     describe('user clicks on an action', () => {
         const id = 0;
         const profile = Data[0]
+        const setTimeout = 500;
 
         describe('user likes a profile', () => {
             const action = 'liked'
 
             beforeEach(() => {
+                jest.useFakeTimers()
                 deck.instance().handleAction(id, action);
+                jest.advanceTimersByTime(setTimeout)
             });
 
             afterEach(() => {
@@ -56,7 +59,9 @@ describe('Deck component', () => {
             const action = 'superliked';
 
             beforeEach(() => {
+                jest.useFakeTimers();
                 deck.instance().handleAction(id, action);
+                jest.advanceTimersByTime(setTimeout);
             });
 
             afterEach(() => {
@@ -77,7 +82,9 @@ describe('Deck component', () => {
             const action = 'disliked';
 
             beforeEach(() => {
+                jest.useFakeTimers();
                 deck.instance().handleAction(id, action);
+                jest.advanceTimersByTime(setTimeout);
             });
 
             afterEach(() => {

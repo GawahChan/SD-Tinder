@@ -22,7 +22,9 @@ class Deck extends Component {
 
     let stuntDoubleList = this.state.stuntDoubleList.filter(stuntDouble => stuntDouble.id !== id);
 
-    this.setState({ [action]: actionState, stuntDoubleList });
+    setTimeout(() => {
+      this.setState({ [action]: actionState, stuntDoubleList });
+    }, 500);
   }
 
   render() {
@@ -43,7 +45,7 @@ class Deck extends Component {
                   handleAction={this.handleAction}
                 />
               );
-            }):
+            }) :
             <Result
               liked={this.state.liked}
               superliked={this.state.superliked}
