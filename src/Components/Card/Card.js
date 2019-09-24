@@ -26,6 +26,28 @@ class Card extends Component {
         this.setState({ action: actionName, removeCard: actionName })
     }
 
+    handleDrag = (event, info) => {
+        let xPosition = info.point.x;
+        let yPosition = info.point.y;
+
+        let action = xPosition > 40 ? 'liked' :
+            xPosition < -40 ? 'disliked' :
+                yPosition < -40 ? 'superliked' : '';
+
+        this.setState({ action })
+    }
+
+    handleDragEnd = (event, info) => {
+        let xPosition = info.point.x;
+        let yPosition = info.point.y;
+        
+        return (
+            xPosition > 130 ? this.action(this.props.id, 'liked') :
+                xPosition < -130 ? this.action(this.props.id, 'disliked') :
+                    yPosition < -40 ? this.action(this.props.id, 'superliked') : this.setState({ action: '' })
+        );
+    }
+
     render() {
         return (
             <motion.div
@@ -36,22 +58,12 @@ class Card extends Component {
                 drag
                 dragElastic={0.5}
                 dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
-                onDrag={(event, info) => {
-                    if (info.point.x > 40) this.setState({ action: 'liked' })
-                    else if (info.point.x < -40) this.setState({ action: 'disliked' })
-                    else if (info.point.y < -40) this.setState({ action: 'superliked' })
-                    else this.setState({ action: '' })
-                }}
-                onDragEnd={(event, info) => {
-                    if (info.point.x > 130) this.action(this.props.id, 'liked')
-                    else if (info.point.x < -130) this.action(this.props.id, 'disliked')
-                    else if (info.point.y < -130) this.action(this.props.id, 'superliked')
-                    else this.setState({ action: '' })
-                }}
+                onDrag={(event, info) => this.handleDrag(event, info)}
+                onDragEnd={(event, info) => this.handleDragEnd(event, info)}
                 animate={
-                    this.state.removeCard === 'liked' ? { x: 500, opacity: 0} :
+                    this.state.removeCard === 'liked' ? { x: 500, opacity: 0 } :
                         this.state.removeCard === 'disliked' ? { x: -500, opacity: 0 } :
-                            this.state.removeCard === 'superliked' ? { y: -500, opacity: 0} :
+                            this.state.removeCard === 'superliked' ? { y: -500, opacity: 0 } :
                                 { x: 0, y: 0 }
                 }>
                 <div className={`display-action ${this.state.action}`}>

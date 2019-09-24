@@ -28,7 +28,8 @@
 }
 
 .card p {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 /*Display Action Overlay CSS */
@@ -75,6 +76,7 @@
     outline: 0;
     cursor: pointer;
 }
+
 .card-actions {
     display: flex;
     justify-content: center;
