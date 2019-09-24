@@ -30,9 +30,9 @@ class Card extends Component {
         let xPosition = info.point.x;
         let yPosition = info.point.y;
 
-        let action = xPosition > 40 ? 'liked' :
-            xPosition < -40 ? 'disliked' :
-                yPosition < -40 ? 'superliked' : '';
+        let action = xPosition > 30 ? 'liked' :
+            xPosition < -30 ? 'disliked' :
+                yPosition < -30 ? 'superliked' : '';
 
         this.setState({ action })
     }
@@ -42,9 +42,9 @@ class Card extends Component {
         let yPosition = info.point.y;
         
         return (
-            xPosition > 130 ? this.action(this.props.id, 'liked') :
-                xPosition < -130 ? this.action(this.props.id, 'disliked') :
-                    yPosition < -130 ? this.action(this.props.id, 'superliked') : this.setState({ action: '' })
+            xPosition > 100 ? this.action(this.props.id, 'liked') :
+                xPosition < -100 ? this.action(this.props.id, 'disliked') :
+                    yPosition < -100 ? this.action(this.props.id, 'superliked') : this.setState({ action: '' })
         );
     }
 
