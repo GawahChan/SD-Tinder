@@ -76,7 +76,7 @@ class Card extends Component {
                     <h1>{this.props.name}, {this.props.age}</h1>
                     <div className='card-subtitle'>
                         <p>{this.props.location}</p>
-                        <motion.button onTap={this.toggleBio}>
+                        <motion.button whileTap={this.toggleBio}>
                             <img src={Info} alt='Info' />
                         </motion.button>
                     </div>
@@ -87,15 +87,15 @@ class Card extends Component {
                         </div>
                     }
                     <div className='card-actions'>
-                        <button className='disliked' onClick={(e) => this.action(this.props.id, e.currentTarget.className)}>
-                            <img src={Dislike} alt='Dislike' />
-                        </button>
-                        <button className='superliked' onClick={(e) => this.action(this.props.id, e.currentTarget.className)}>
-                            <img src={Superlike} alt='Superlike' />
-                        </button>
-                        <button className='liked' onClick={(e) => this.action(this.props.id, e.currentTarget.className)}>
-                            <img src={Like} alt='Like' />
-                        </button>
+                        <motion.button onTap={() => this.action(this.props.id, 'disliked')}>
+                            <img src={Dislike} alt='disliked' />
+                        </motion.button>
+                        <motion.button onTap={() => this.action(this.props.id, 'superliked')}>
+                            <img src={Superlike} alt='superliked' />
+                        </motion.button>
+                        <motion.button onTap={() => this.action(this.props.id, 'liked')}>
+                            <img src={Like} alt='liked' />
+                        </motion.button>
                     </div>
                 </div>
             </motion.div >

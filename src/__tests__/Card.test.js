@@ -12,7 +12,7 @@ describe('Card Component', () => {
     const likedAnimation = { x: 300, opacity: 0 };
     const dislikedAnimation = { x: -300, opacity: 0 };
     const superlikedAnimation = { y: -300, opacity: 0 };
-    
+
     it('renders correctly', () => {
         expect(card).toMatchSnapshot();
     });
@@ -121,6 +121,7 @@ describe('Card Component', () => {
     });
 
     describe('user clicks an action button', () => {
+        let propsId = 0;
 
         beforeEach(() => {
             mockHandleAction.mockClear();
@@ -129,27 +130,30 @@ describe('Card Component', () => {
             card.setState({ displatBio: false, action: '', removeCard: false })
         });
 
-        it('disliked button calls event handler', () => {
+        it('event handler sets `action` state to "disliked" and `removeCard` state with animation', () => {
             let actionName = 'disliked';
-            card.find(`.${actionName}`).simulate('Click', { currentTarget: { className: 'disliked' } })
+
+            card.instance().action(propsId, actionName)
 
             expect(card.state('action')).toBe(actionName)
             expect(card.state('removeCard')).toEqual(dislikedAnimation)
             expect(mockHandleAction).toHaveBeenCalledTimes(1);
         })
 
-        it('superliked button calls event handler', () => {
+        it('event handler sets `action` state to "superliked" and `removeCard` state with animation', () => {
             let actionName = 'superliked';
-            card.find(`.${actionName}`).simulate('Click', { currentTarget: { className: 'superliked' } })
+            
+            card.instance().action(propsId, actionName)
 
             expect(card.state('action')).toBe(actionName)
             expect(card.state('removeCard')).toEqual(superlikedAnimation)
             expect(mockHandleAction).toHaveBeenCalledTimes(1);
         });
 
-        it('liked button calls event handler', () => {
+        it('event handler sets `action` state to "liked" and `removeCard` state with animation', () => {
             let actionName = 'liked';
-            card.find(`.${actionName}`).simulate('Click', { currentTarget: { className: 'liked' } })
+
+            card.instance().action(propsId, actionName)
 
             expect(card.state('action')).toBe(actionName)
             expect(card.state('removeCard')).toEqual(likedAnimation)

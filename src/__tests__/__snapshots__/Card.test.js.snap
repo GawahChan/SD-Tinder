@@ -47,45 +47,42 @@ exports[`Card Component renders correctly 1`] = `
       <p>
         LA, USA
       </p>
-      <button
-        onClick={[Function]}
+      <ForwardRef(MotionComponent)
+        whileTap={[Function]}
       >
         <img
           alt="Info"
           src="info.svg"
         />
-      </button>
+      </ForwardRef(MotionComponent)>
     </div>
     <div
       className="card-actions"
     >
-      <button
-        className="disliked"
-        onClick={[Function]}
+      <ForwardRef(MotionComponent)
+        onTap={[Function]}
       >
         <img
-          alt="Dislike"
+          alt="disliked"
           src="Dislike.svg"
         />
-      </button>
-      <button
-        className="superliked"
-        onClick={[Function]}
+      </ForwardRef(MotionComponent)>
+      <ForwardRef(MotionComponent)
+        onTap={[Function]}
       >
         <img
-          alt="Superlike"
+          alt="superliked"
           src="SuperLike.svg"
         />
-      </button>
-      <button
-        className="liked"
-        onClick={[Function]}
+      </ForwardRef(MotionComponent)>
+      <ForwardRef(MotionComponent)
+        onTap={[Function]}
       >
         <img
-          alt="Like"
+          alt="liked"
           src="Like.svg"
         />
-      </button>
+      </ForwardRef(MotionComponent)>
     </div>
   </div>
 </ForwardRef(MotionComponent)>
