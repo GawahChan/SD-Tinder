@@ -9,6 +9,10 @@ describe('Card Component', () => {
 
     const card = shallow(<Card {...props} handleAction={mockHandleAction} />);
 
+    const likedAnimation = { x: 300, opacity: 0 };
+    const dislikedAnimation = { x: -300, opacity: 0 };
+    const superlikedAnimation = { y: -300, opacity: 0 };
+    
     it('renders correctly', () => {
         expect(card).toMatchSnapshot();
     });
@@ -40,6 +44,10 @@ describe('Card Component', () => {
     });
 
     describe('Card drag actions', () => {
+
+        const likedAnimation = { x: 300, opacity: 0 };
+        const dislikedAnimation = { x: -300, opacity: 0 };
+        const superlikedAnimation = { y: -300, opacity: 0 }
 
         describe('User ONLY drags the card to DISPLAY the action, doesnt actually chose an action yet', () => {
             afterEach(() => {
@@ -77,36 +85,36 @@ describe('Card Component', () => {
                 card.setState({ action: "", removeCard: false })
             });
 
-            it('User swipes right to like, updates `action` and `removeCard` states with "liked" as well updates the parent through the `handleAction` prop', () => {
+            it('User swipes right to like, updates `action` state with "liked", updates `removeCard` state with animation, updates parent through the `handleAction` prop', () => {
                 let action = 'liked';
                 let event = '';
                 let info = { point: { x: 140, y: 0 } };
                 card.instance().handleDragEnd(event, info);
 
                 expect(card.state('action')).toEqual(action);
-                expect(card.state('removeCard')).toEqual(action);
+                expect(card.state('removeCard')).toEqual(likedAnimation);
                 expect(mockHandleAction).toHaveBeenCalledTimes(1);
             });
 
-            it('User swipes right to dislike, updates `action` and `removeCard` states with "disliked" as well updates the parent through the `handleAction` prop', () => {
+            it('User swipes left to dislike, updates `action` state with "disliked", updates `removeCard` state with animation, updates parent through the `handleAction` prop', () => {
                 let action = 'disliked';
                 let event = '';
                 let info = { point: { x: -140, y: 0 } };
                 card.instance().handleDragEnd(event, info);
 
                 expect(card.state('action')).toEqual(action);
-                expect(card.state('removeCard')).toEqual(action);
+                expect(card.state('removeCard')).toEqual(dislikedAnimation);
                 expect(mockHandleAction).toHaveBeenCalledTimes(1);
             });
 
-            it('User swipes right to superlike, updates `action` and `removeCard` states with "superliked" as well updates the parent through the `handleAction` prop', () => {
+            it('User swipes up to superlike, updates `action` with "superliked", updates `removeCard` state with animation,updates parent through the `handleAction` prop', () => {
                 let action = 'superliked';
                 let event = '';
                 let info = { point: { x: 0, y: -140 } };
                 card.instance().handleDragEnd(event, info);
 
                 expect(card.state('action')).toEqual(action);
-                expect(card.state('removeCard')).toEqual(action);
+                expect(card.state('removeCard')).toEqual(superlikedAnimation);
                 expect(mockHandleAction).toHaveBeenCalledTimes(1);
             });
         });
@@ -126,7 +134,7 @@ describe('Card Component', () => {
             card.find(`.${actionName}`).simulate('Click', { currentTarget: { className: 'disliked' } })
 
             expect(card.state('action')).toBe(actionName)
-            expect(card.state('removeCard')).toBe(actionName)
+            expect(card.state('removeCard')).toEqual(dislikedAnimation)
             expect(mockHandleAction).toHaveBeenCalledTimes(1);
         })
 
@@ -135,7 +143,7 @@ describe('Card Component', () => {
             card.find(`.${actionName}`).simulate('Click', { currentTarget: { className: 'superliked' } })
 
             expect(card.state('action')).toBe(actionName)
-            expect(card.state('removeCard')).toBe(actionName)
+            expect(card.state('removeCard')).toEqual(superlikedAnimation)
             expect(mockHandleAction).toHaveBeenCalledTimes(1);
         });
 
@@ -144,7 +152,7 @@ describe('Card Component', () => {
             card.find(`.${actionName}`).simulate('Click', { currentTarget: { className: 'liked' } })
 
             expect(card.state('action')).toBe(actionName)
-            expect(card.state('removeCard')).toBe(actionName)
+            expect(card.state('removeCard')).toEqual(likedAnimation)
             expect(mockHandleAction).toHaveBeenCalledTimes(1);
         });
     });

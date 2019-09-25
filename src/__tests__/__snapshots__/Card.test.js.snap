@@ -2,12 +2,7 @@
 
 exports[`Card Component renders correctly 1`] = `
 <ForwardRef(MotionComponent)
-  animate={
-    Object {
-      "x": 0,
-      "y": 0,
-    }
-  }
+  animate={false}
   className="card "
   drag={true}
   dragConstraints={

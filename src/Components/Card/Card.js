@@ -23,16 +23,23 @@ class Card extends Component {
     action = (id, actionName) => {
         this.props.handleAction(id, actionName);
 
-        this.setState({ action: actionName, removeCard: actionName })
+        let handleCardAnimation =
+            actionName === 'liked' ? { x: 300, opacity: 0 } :
+                actionName === 'disliked' ? { x: -300, opacity: 0 } :
+                    actionName === 'superliked' ? { y: -300, opacity: 0 } :
+                        { x: 0, y: 0 }
+
+        this.setState({ action: actionName, removeCard: handleCardAnimation })
     }
 
     handleDrag = (event, info) => {
         let xPosition = info.point.x;
         let yPosition = info.point.y;
 
-        let action = xPosition > 30 ? 'liked' :
-            xPosition < -30 ? 'disliked' :
-                yPosition < -30 ? 'superliked' : '';
+        let action =
+            xPosition > 30 ? 'liked' :
+                xPosition < -30 ? 'disliked' :
+                    yPosition < -30 ? 'superliked' : '';
 
         this.setState({ action })
     }
@@ -40,7 +47,7 @@ class Card extends Component {
     handleDragEnd = (event, info) => {
         let xPosition = info.point.x;
         let yPosition = info.point.y;
-        
+
         return (
             xPosition > 100 ? this.action(this.props.id, 'liked') :
                 xPosition < -100 ? this.action(this.props.id, 'disliked') :
@@ -60,12 +67,8 @@ class Card extends Component {
                 dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
                 onDrag={(event, info) => this.handleDrag(event, info)}
                 onDragEnd={(event, info) => this.handleDragEnd(event, info)}
-                animate={
-                    this.state.removeCard === 'liked' ? { x: 300, opacity: 0 } :
-                        this.state.removeCard === 'disliked' ? { x: -300, opacity: 0 } :
-                            this.state.removeCard === 'superliked' ? { y: -300, opacity: 0 } :
-                                { x: 0, y: 0 }
-                }>
+                animate={this.state.removeCard}
+            >
                 <div className={`display-action ${this.state.action}`}>
                     <h1>{this.state.action.toUpperCase()}</h1>
                 </div>
