@@ -76,9 +76,9 @@ class Card extends Component {
                     <h1>{this.props.name}, {this.props.age}</h1>
                     <div className='card-subtitle'>
                         <p>{this.props.location}</p>
-                        <button onClick={this.toggleBio}>
+                        <motion.button onTap={this.toggleBio}>
                             <img src={Info} alt='Info' />
-                        </button>
+                        </motion.button>
                     </div>
                     {
                         this.state.displayBio &&
