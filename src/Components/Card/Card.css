@@ -1,7 +1,7 @@
 .card {
     position: absolute;
     border-radius: 10px;
-    box-shadow: 2px 2px 20px #202020;
+    box-shadow: 1px 1px 10px 1px #202020;
 
     background-position: top;
     background-size: cover;
@@ -14,7 +14,8 @@
     width: 320px;
     height: 500px;
 
-    transition: box-shadow 0.5s
+    transition: box-shadow 0.5s;
+    will-change: transform
 }
 
 .card img {
@@ -95,15 +96,18 @@
 
 /*Event handler CSS */
 .card.liked {
-    box-shadow: 5px 5px 100px 15px #4bb12c;
+    box-shadow: 1px 1px 30px 10px #4bb12c;
+    border: 1px solid #4bb12c
 }
 
 .card.disliked {
-    box-shadow: 5px 5px 100px 15px #ff0000
+    box-shadow: 1px 1px 30px 10px  #ff0000;
+    border: 1px solid #ff0000
 }
 
 .card.superliked {
-    box-shadow: 5px 5px 100px 15px #09cfcf
+    box-shadow: 1px 1px 30px 10px #09cfcf;
+    border: 1px solid #09cfcf;
 }
 
 /*Animations */
