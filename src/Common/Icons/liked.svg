@@ -12,7 +12,7 @@
    viewBox="0 0 24 24"
    version="1.1"
    id="svg827"
-   sodipodi:docname="Dislike.svg"
+   sodipodi:docname="Like.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata833">
@@ -36,20 +36,26 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1916"
-     inkscape:window-height="2003"
+     inkscape:window-width="3840"
+     inkscape:window-height="2019"
      id="namedview829"
      showgrid="false"
-     inkscape:zoom="36.563313"
-     inkscape:cx="13.279416"
-     inkscape:cy="11.123283"
-     inkscape:window-x="1908"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg827" />
+     inkscape:zoom="48.335482"
+     inkscape:cx="8.3410897"
+     inkscape:cy="9.9141001"
+     inkscape:window-x="-14"
+     inkscape:window-y="-14"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg827"
+     showguides="true" />
   <path
-     d="M 23.316255,19.982411 15.493985,12.390827 23.20807,4.7317326 19.730146,1.3127913 12.004772,9.0051778 4.1872054,1.419142 0.73844512,4.8094147 8.5663598,12.429668 l -7.71972934,7.687763 3.44876034,3.390272 7.7488922,-7.692386 7.794048,7.586036 z"
+     d="M 11.981941,8.3771431 C 10.997839,5.5905219 5.999144,6.0044633 5.9858531,10.218718 c -0.00662,2.099644 1.5120879,4.893491 5.9658669,7.740501 4.471736,-2.84701 6.008069,-5.640857 6.01469,-7.740501 0.01323,-4.1899961 -4.977251,-4.6447126 -5.984469,-1.8415749 z"
      id="path825"
-     style="fill:#ff8080;stroke-width:0.93273085"
+     style="fill:#87de87;stroke-width:0.5075925"
      inkscape:connector-curvature="0" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path1447"
+     style="fill:#f9f9f9"
+     d="m 11.985176,-0.01323172 c -6.6269996,0 -11.99999961,5.37299992 -11.99999961,12.00000072 0,6.627 5.37300001,12 11.99999961,12 6.627001,0 12.000001,-5.373 12.000001,-12 0,-6.6270008 -5.373,-12.00000072 -12.000001,-12.00000072 z m 0,1.99999992 c 5.514001,0 10.000001,4.486 10.000001,10.0000008 0,5.514 -4.486,10 -10.000001,10 -5.5139996,0 -9.9999996,-4.486 -9.9999996,-10 0,-5.5140008 4.486,-10.0000008 9.9999996,-10.0000008 z" />
 </svg>
