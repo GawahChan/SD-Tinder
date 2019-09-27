@@ -1,11 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Deck from '../Components/Deck/Deck';
-import Data from '../Data';
+import Deck from '../../Components/Deck/Deck';
+import Data from '../../Data';
 
 describe('Deck component', () => {
     const deck = shallow(<Deck />);
-
 
     it('renders correctly', () => {
         expect(deck).toMatchSnapshot();

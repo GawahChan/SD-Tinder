@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Deck component renders correctly 1`] = `
+<div
+  className="deck"
+>
+  <Cards
+    handleAction={[Function]}
+    stuntDoubleList={
+      Array [
+        Object {
+          "age": "28",
+          "bio": "Recently finished stunt doubling for the movie 'Alita: Battle Angel' and am looking for a new role! Have stunt doubled for major films such as Wonder Woman (Gal Gadot), 'The Punisher' and 'Marvel's Agents of S.H.I.E.L.D'. If you're interested, swipe right and drop me a message!",
+          "id": 0,
+          "img": "Alicia-Vela-Bailey",
+          "location": "LA, USA",
+          "name": "Alicia Vela-Bailey",
+        },
+        Object {
+          "age": "58",
+          "bio": "Just finished working as a stunt performer in the movie Dhaka and am looking for a new role. I've stunt doubled for many characters in both the Marvel and DC universe. Drop me a message if you're interested",
+          "id": 1,
+          "img": "Richard-Cetrone",
+          "location": "Pennsylvania, USA",
+          "name": "Richard Cetrone",
+        },
+        Object {
+          "age": "32",
+          "bio": "From stunt doubling as the champion of the 74th Hunger Games to multiple superheroines from the Marvel Universe, I'm looking for a new action packed role! Let me know if you're interested!",
+          "id": 2,
+          "img": "Renae-Moneymaker",
+          "location": "LA, USA",
+          "name": "Renae Moneymaker",
+        },
+        Object {
+          "age": "33",
+          "bio": "Recently finished stunt doubling for Chris Hemsworth(Thor from Avengers) and am currently working as a stunt performer for the new Marvel 'Black Widow' movie. Looking for a new role early next year after I'm finished. Let me know if you're interested! ",
+          "id": 3,
+          "img": "Bobby-Hanton",
+          "location": "Portsmouth, UK",
+          "name": "Bobby Hanton",
+        },
+        Object {
+          "age": "22",
+          "bio": "You may know me as Daenerys Stormborn of the House Targaryen, First of Her Name, the Unburnt, Queen of the Andals and the First Men, Khaleesi of the Great Grass Sea, Breaker of Chains, and Mother of Dragons. Recently finished filming and am looking for a new role. Send me a raven if you're interested!",
+          "id": 4,
+          "img": "Rosie-Mac",
+          "location": "Newcastle, UK",
+          "name": "Rosie Mac",
+        },
+        Object {
+          "age": "45",
+          "bio": "Stunt Doubled for Dwayne Johnson for 17 years. I can do a range of stunts but mostly specialise in driving and combat. If you're interested, drop me a message!",
+          "id": 5,
+          "img": "Tanoai-Reed",
+          "location": "Honolulu, Hawaii",
+          "name": "Tanoai Reed",
+        },
+        Object {
+          "age": "36",
+          "bio": "Just finished working on a film and am looking for a new role. I've 10 years stunt doubling experience, including stunt doubling for Angelina Jolie(Salt), Jessica Biel (Total Recall) as well as for Nick Thurnston (Caesar in Dawn of the Apes). I can do a range of combat stunts but mostly specialise in horse riding. Swipe right if you're intrested!",
+          "id": 6,
+          "img": "Janene-Carleton",
+          "location": "Kelowna, Canada",
+          "name": "Janene Carleton",
+        },
+        Object {
+          "age": "40",
+          "bio": "Tired of looking for booty and am now looking for a new stunt double role. Recently finished working on the TV Series 'Harrow' and am looking for a role which starts around early next year. Drop me a message if you're interested!",
+          "id": 7,
+          "img": "Damien-Bryson",
+          "location": "LA, USA",
+          "name": "Damien-Bryson",
+        },
+        Object {
+          "age": "30",
+          "bio": "Currently stunt doubling for the movie 'The Long Night'. Looking for a new role starting around early next year. I have a range of experience, stunt doubling in films such as 'Bourne legacy', 'Pretty Little Liars' and recently 'Triple Frontier'. Let me know if you're interested!",
+          "id": 8,
+          "img": "Katie-Eischen",
+          "location": "Georgia, USA",
+          "name": "Katie Eischen",
+        },
+      ]
+    }
+  />
+</div>
+`;

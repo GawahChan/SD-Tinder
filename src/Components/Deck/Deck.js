@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Result from '../Result/Result';
-import Card from '../Card/Card';
+import Result from './Result/Result';
+import Cards from './Cards/Cards';
 import Data from '../../Data.js';
 
-import './Deck.css';
+import './Deck.css'
+
 class Deck extends Component {
   constructor() {
     super();
@@ -26,36 +27,26 @@ class Deck extends Component {
       this.setState({ [action]: actionState, stuntDoubleList });
     }, 500);
   }
-
+  
   render() {
+    const { stuntDoubleList, liked, superliked, disliked } = this.state;
     return (
-      <div className="deck">
+      <div className='deck'>
         {
-          this.state.stuntDoubleList.length > 0 ?
-            this.state.stuntDoubleList.map(stuntDouble => {
-              return (
-                <Card
-                  key={stuntDouble.id}
-                  id={stuntDouble.id}
-                  name={stuntDouble.name}
-                  img={stuntDouble.img}
-                  age={stuntDouble.age}
-                  location={stuntDouble.location}
-                  bio={stuntDouble.bio}
-                  handleAction={this.handleAction}
-                />
-              );
-            }) :
+          stuntDoubleList.length > 0 ?
+            <Cards
+              stuntDoubleList={stuntDoubleList}
+              handleAction={this.handleAction}
+            /> :
             <Result
-              liked={this.state.liked}
-              superliked={this.state.superliked}
-              disliked={this.state.disliked}
+              liked={liked}
+              superliked={superliked}
+              disliked={disliked}
             />
         }
       </div>
     );
   }
-
 }
 
 export default Deck;
