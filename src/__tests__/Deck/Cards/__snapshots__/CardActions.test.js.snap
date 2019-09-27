@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardActions component renders correctly 1`] = `
+<styled.div>
+  <Styled(Styled(Component))
+    onTap={[Function]}
+  />
+  <Styled(Styled(Component))
+    onTap={[Function]}
+  />
+  <Styled(Component)
+    onTap={[Function]}
+  />
+</styled.div>
+`;
