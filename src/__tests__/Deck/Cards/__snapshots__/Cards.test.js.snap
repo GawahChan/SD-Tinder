@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cards Component renders correctly 1`] = `
+<styled.div>
+  <Card
+    key="0"
+    stuntDouble={
+      Object {
+        "age": "28",
+        "bio": "Recently finished stunt doubling for the movie 'Alita: Battle Angel' and am looking for a new role! Have stunt doubled for major films such as Wonder Woman (Gal Gadot), 'The Punisher' and 'Marvel's Agents of S.H.I.E.L.D'. If you're interested, swipe right and drop me a message!",
+        "id": 0,
+        "img": "Alicia-Vela-Bailey",
+        "location": "LA, USA",
+        "name": "Alicia Vela-Bailey",
+      }
+    }
+  />
+</styled.div>
+`;
