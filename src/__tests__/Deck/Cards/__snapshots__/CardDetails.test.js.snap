@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardDetails component renders correctly 1`] = `
+<div>
+  <styled.h1>
+    , 
+  </styled.h1>
+  <styled.div>
+    <Styled(Component)
+      onTap={[Function]}
+    />
+  </styled.div>
+</div>
+`;
