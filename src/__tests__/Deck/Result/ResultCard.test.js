@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import ResultCard from '../Components/Result/ResultCard';
+import ResultCard from '../../../Components/Deck/Result/ResultCard';
 
 describe('ResultCard component', () => {
     const props = { img: 'Rosie-Mac', name: 'Rosie Mac'}

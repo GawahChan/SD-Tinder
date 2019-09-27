@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Result from '../Components/Result/Result';
-import Data from '../Data';
+import Result from '../../../Components/Deck/Result/Result';
+import Data from '../../../Data';
 
 describe('Result component', () => {
     let props = { liked: [Data[0]], superliked: [Data[1]], disliked: [Data[2]]}
