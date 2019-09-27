@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Component renders correctly 1`] = `
+<Styled(Component)
+  actionColour=""
+  animate={false}
+  drag={true}
+  dragConstraints={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+    }
+  }
+  dragElastic={0.8}
+  onDrag={[Function]}
+  onDragEnd={[Function]}
+>
+  <CardDisplay
+    action=""
+    animateAction={[Function]}
+    stuntDouble={
+      Array [
+        Object {
+          "age": "28",
+          "bio": "Recently finished stunt doubling for the movie 'Alita: Battle Angel' and am looking for a new role! Have stunt doubled for major films such as Wonder Woman (Gal Gadot), 'The Punisher' and 'Marvel's Agents of S.H.I.E.L.D'. If you're interested, swipe right and drop me a message!",
+          "id": 0,
+          "img": "Alicia-Vela-Bailey",
+          "location": "LA, USA",
+          "name": "Alicia Vela-Bailey",
+        },
+      ]
+    }
+  />
+</Styled(Component)>
+`;
