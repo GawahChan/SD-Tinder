@@ -7,32 +7,26 @@ export const CardsContainer = styled.div`
     justify-content: center;
     align-items: center;
 `
+// eslint-disable-next-line 
+export const CardContainer = styled(motion.div).attrs(props => ({
+    style: {
+        boxShadow: props.actionColour === 'liked' ? '0px 0px 20px #15ff00' :
+            props.actionColour === 'disliked' ? '0px 0px 20px #ff0000' :
+                props.actionColour === 'superliked' ? '0 0 20px #02fdfd' : '0px 0px 10px #080808',
 
-export const CardContainer = styled(motion.div)`
+        border: props.actionColour === 'liked' ? '1px solid #15ff00' :
+            props.actionColour === 'disliked' ? '1px solid #ff0000' :
+                props.actionColour === 'superliked' ? '1px solid #02fdfd' : 'none'
+    }
+}))
+    `
     position: absolute;
-
     border-radius: 10px;
     overflow: hidden;
 
     width: 320px;
     height: 500px;
-
-    box-shadow: ${props => {
-        return (
-            props.actionColour === 'liked' ? '0px 0px 20px #15ff00' :
-                props.actionColour === 'disliked' ? '0px 0px 20px #ff0000' :
-                    props.actionColour === 'superliked' ? '0 0 20px #02fdfd' : '0px 0px 10px #080808'
-        )
-    }};
         
-    border: ${ props => {
-        return (
-            props.actionColour === 'liked' ? '1px solid #15ff00' :
-                props.actionColour === 'disliked' ? '1px solid #ff0000' :
-                    props.actionColour === 'superliked' ? '1px solid #02fdfd' : 'none'
-        )
-    }};
-
     transition: box-shadow 0.5s, border 0.5s;
     will-change: transform;
 `
@@ -40,7 +34,7 @@ export const CardContainer = styled(motion.div)`
 export const CardContents = styled(motion.div)`
     width: 100%;
     height: 100%;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end; 
@@ -63,8 +57,15 @@ export const CardContent = styled.div`
     padding: 1rem;
     color: #DDDDDD;
 `
-
-export const CardOverlay = styled.h1`
+// eslint-disable-next-line 
+export const CardOverlay = styled.h1.attrs(props => ({
+    style: {
+        color: props.actionColour === 'LIKED' ? '#15ff00' :
+            props.actionColour === 'DISLIKED' ? '#ff0000' :
+                props.actionColour === 'SUPERLIKED' ? '#02fdfd' : 'black'
+    }
+}))
+    `
     height: 30%;
     width: 100%;
 
@@ -75,13 +76,6 @@ export const CardOverlay = styled.h1`
     font-size: 3rem;
     font-weight: 500;
 
-    color: ${props => {
-        return (
-            props.actionColour === 'LIKED' ? '#15ff00' :
-                props.actionColour === 'DISLIKED' ? '#ff0000' :
-                    props.actionColour === 'SUPERLIKED' ? '#02fdfd' : ''
-        )
-    }};
 `
 export const CardTitle = styled.h1`
     margin: 0;
