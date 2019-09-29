@@ -40,9 +40,9 @@ class Card extends Component {
         let yPosition = info.point.y;
 
         return (
-            xPosition > 100 ? this.animateAction(id, 'liked') :
-                xPosition < -100 ? this.animateAction(id, 'disliked') :
-                    yPosition < -100 ? this.animateAction(id, 'superliked') :
+            xPosition > 80 ? this.animateAction(id, 'liked') :
+                xPosition < -80 ? this.animateAction(id, 'disliked') :
+                    yPosition < -80 ? this.animateAction(id, 'superliked') :
                         this.setState({ action: '' })
         );
     }
