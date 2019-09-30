@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result component renders correctly 1`] = `
+<styled.div>
+  <styled.h1>
+    There's no one new around you
+  </styled.h1>
+  <Result
+    stuntDouble={
+      Array [
+        Object {
+          "age": "58",
+          "bio": "Just finished working as a stunt performer in the movie Dhaka and am looking for a new role. I've stunt doubled for many characters in both the Marvel and DC universe. Drop me a message if you're interested",
+          "id": 1,
+          "img": "Richard-Cetrone",
+          "location": "Pennsylvania, USA",
+          "name": "Richard Cetrone",
+        },
+      ]
+    }
+    subTitle="You didn't superlike anyone"
+    title="People you superliked!"
+  />
+  <Result
+    stuntDouble={
+      Array [
+        Object {
+          "age": "28",
+          "bio": "Recently finished stunt doubling for the movie 'Alita: Battle Angel' and am looking for a new role! Have stunt doubled for major films such as Wonder Woman (Gal Gadot), 'The Punisher' and 'Marvel's Agents of S.H.I.E.L.D'. If you're interested, swipe right and drop me a message!",
+          "id": 0,
+          "img": "Alicia-Vela-Bailey",
+          "location": "LA, USA",
+          "name": "Alicia Vela-Bailey",
+        },
+      ]
+    }
+    subTitle="You didn't like anyone"
+    title="People you liked... let's hope they like you too!"
+  />
+  <Result
+    stuntDouble={
+      Array [
+        Object {
+          "age": "32",
+          "bio": "From stunt doubling as the champion of the 74th Hunger Games to multiple superheroines from the Marvel Universe, I'm looking for a new action packed role! Let me know if you're interested!",
+          "id": 2,
+          "img": "Renae-Moneymaker",
+          "location": "LA, USA",
+          "name": "Renae Moneymaker",
+        },
+      ]
+    }
+    subTitle="Cast a wide net they said..."
+    title="People you disliked"
+  />
+</styled.div>
+`;
