@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/SD-Tinder/static/css/main.f572ee5a.chunk.css",
+    "main.js": "/SD-Tinder/static/js/main.e1a51df3.chunk.js",
+    "main.js.map": "/SD-Tinder/static/js/main.e1a51df3.chunk.js.map",
+    "runtime-main.js": "/SD-Tinder/static/js/runtime-main.2d23ca3f.js",
+    "runtime-main.js.map": "/SD-Tinder/static/js/runtime-main.2d23ca3f.js.map",
+    "static/js/2.cca12fd5.chunk.js": "/SD-Tinder/static/js/2.cca12fd5.chunk.js",
+    "static/js/2.cca12fd5.chunk.js.map": "/SD-Tinder/static/js/2.cca12fd5.chunk.js.map",
+    "index.html": "/SD-Tinder/index.html",
+    "precache-manifest.017d3f1f4852bb82c5541bf6f3acd130.js": "/SD-Tinder/precache-manifest.017d3f1f4852bb82c5541bf6f3acd130.js",
+    "service-worker.js": "/SD-Tinder/service-worker.js",
+    "static/css/main.f572ee5a.chunk.css.map": "/SD-Tinder/static/css/main.f572ee5a.chunk.css.map",
+    "static/media/Alicia-Vela-Bailey.jpg": "/SD-Tinder/static/media/Alicia-Vela-Bailey.6fa17d17.jpg",
+    "static/media/Bobby-Hanton.jpg": "/SD-Tinder/static/media/Bobby-Hanton.1146b079.jpg",
+    "static/media/Damien-Bryson.jpg": "/SD-Tinder/static/media/Damien-Bryson.f0f4194a.jpg",
+    "static/media/Janene-Carleton.jpg": "/SD-Tinder/static/media/Janene-Carleton.6d62b41b.jpg",
+    "static/media/Katie-Eischen.jpg": "/SD-Tinder/static/media/Katie-Eischen.5562cb15.jpg",
+    "static/media/Renae-Moneymaker.jpg": "/SD-Tinder/static/media/Renae-Moneymaker.11f27be6.jpg",
+    "static/media/Richard-Cetrone.jpg": "/SD-Tinder/static/media/Richard-Cetrone.e05df443.jpg",
+    "static/media/Rosie-Mac.jpg": "/SD-Tinder/static/media/Rosie-Mac.c28d9926.jpg",
+    "static/media/Tanoai-Reed.jpg": "/SD-Tinder/static/media/Tanoai-Reed.9708eb19.jpg",
+    "static/media/disliked.svg": "/SD-Tinder/static/media/disliked.bedf6174.svg",
+    "static/media/info.svg": "/SD-Tinder/static/media/info.b9fba64e.svg",
+    "static/media/liked.svg": "/SD-Tinder/static/media/liked.5a433b84.svg",
+    "static/media/superliked.svg": "/SD-Tinder/static/media/superliked.b5e8710b.svg"
+  }
+}
