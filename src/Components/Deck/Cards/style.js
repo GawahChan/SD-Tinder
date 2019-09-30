@@ -40,13 +40,7 @@ export const CardContents = styled(motion.div)`
     flex-direction: column;
     justify-content: flex-end; 
 
-    background-image: ${props => {
-        return (
-            `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,1)),
-            url(${require(`../../../Common/Profile/${props.img}.jpg`)})`
-        )
-
-    }};
+    background-image: ${props => `url(${require(`../../../Common/Profile/${props.img}.jpg`)})`};
     background-position: top;
     background-size: cover;
 
@@ -57,6 +51,7 @@ export const CardContents = styled(motion.div)`
 export const CardContent = styled.div`
     padding: 1rem;
     color: #DDDDDD;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.7), rgba(0,0,0,0.8), rgba(0,0,0,1));
 `
 // eslint-disable-next-line 
 export const CardOverlay = styled.h1.attrs(props => ({

@@ -80,7 +80,7 @@ describe('Card Component', () => {
             card.setState({ action: '' });
         });
         describe('user drags card to hover over "liked" area', () => {
-            let info = { point: { x: 40, y: 0 } }
+            let info = { point: { x: 60, y: 0 } }
             let action = 'liked';
 
             it('sets `action` state to "liked"', () => {
@@ -91,7 +91,7 @@ describe('Card Component', () => {
         });
 
         describe('user drags card to hover over "disliked" area', () => {
-            let info = { point: { x: -40, y: 0 } }
+            let info = { point: { x: -60, y: 0 } }
             let action = 'disliked';
 
             it('sets `action` state to "disliked"', () => {
@@ -102,7 +102,7 @@ describe('Card Component', () => {
         });
 
         describe('user drags card to hover over "superliked" area', () => {
-            let info = { point: { x: 0, y: -40 } }
+            let info = { point: { x: 0, y: -60 } }
             let action = 'superliked';
 
             it('sets `action` state to "superliked"', () => {

@@ -36,7 +36,7 @@ export const ResultSubTitle = styled(ResultHeader)`
 export const ResultProfile = styled.div`
     background-image: ${props => {
         return (
-            `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.6), rgba(0,0,0,1)),
+            `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,1)),
             url(${require(`../../../Common/Profile/${props.img}.jpg`)})     `
         )
     }};
