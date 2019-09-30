@@ -1,8 +1,8 @@
 {
-  "name": "planes-coding-test",
+  "name": "sd-tinder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://GawahChan.github.io/Planes-Coding-Test",
+  "homepage": "https://GawahChan.github.io/SD-Tinder",
   "dependencies": {
     "framer-motion": "^1.6.7",
     "gh-pages": "^2.1.1",
