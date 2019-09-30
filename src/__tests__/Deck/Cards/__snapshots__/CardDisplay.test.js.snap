@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CardDisplay Component renders correctly 1`] = `
-<Styled(Component)>
+<Styled(Component)
+  actionColour=""
+>
   <styled.h1
     actionColour=""
   />

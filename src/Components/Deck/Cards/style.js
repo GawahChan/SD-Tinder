@@ -6,6 +6,7 @@ export const CardsContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 `
 // eslint-disable-next-line 
 export const CardContainer = styled(motion.div).attrs(props => ({
@@ -41,7 +42,7 @@ export const CardContents = styled(motion.div)`
 
     background-image: ${props => {
         return (
-            `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.7), rgba(0,0,0,1)),
+            `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,1)),
             url(${require(`../../../Common/Profile/${props.img}.jpg`)})`
         )
 

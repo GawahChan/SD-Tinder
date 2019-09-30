@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result Component renders correctly 1`] = `
+<div>
+  <Styled(styled.h1)>
+    Title
+  </Styled(styled.h1)>
+  <styled.div>
+    <ResultCard
+      img="Alicia-Vela-Bailey"
+      key="0"
+      name="Alicia Vela-Bailey"
+    />
+    <ResultCard
+      img="Richard-Cetrone"
+      key="1"
+      name="Richard Cetrone"
+    />
+    <ResultCard
+      img="Renae-Moneymaker"
+      key="2"
+      name="Renae Moneymaker"
+    />
+  </styled.div>
+</div>
+`;
