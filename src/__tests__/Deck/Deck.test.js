@@ -110,7 +110,7 @@ describe('Deck component', () => {
         });
         
         it('renders <Results/> component', () => {
-            expect(deck.find('.deck').children('Result').length).toEqual(1);
+            expect(deck.children('Results').length).toEqual(1);
         });
     });
 });

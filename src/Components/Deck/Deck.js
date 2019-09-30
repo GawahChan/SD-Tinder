@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import Result from './Result/Result';
+import Results from './Results/Results';
 import Cards from './Cards/Cards';
 import Data from '../../Data.js';
-
-import './Deck.css'
 
 class Deck extends Component {
   constructor() {
@@ -31,14 +29,14 @@ class Deck extends Component {
   render() {
     const { stuntDoubleList, liked, superliked, disliked } = this.state;
     return (
-      <div className='deck'>
+      <div>
         {
           stuntDoubleList.length > 0 ?
             <Cards
               stuntDoubleList={stuntDoubleList}
               handleAction={this.handleAction}
             /> :
-            <Result
+            <Results
               liked={liked}
               superliked={superliked}
               disliked={disliked}
