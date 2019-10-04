@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/SD-Tinder/precache-manifest.c44460dff353baa32952bf9c8502d6e0.js"
+  "/SD-Tinder/precache-manifest.14f3654222581c0005f5ccd72f3bd1ba.js"
 );
 
 self.addEventListener('message', (event) => {
