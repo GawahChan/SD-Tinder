@@ -5,9 +5,9 @@ import {CardButtonContainer, CardLikedButton, CardDislikedButton, CardSuperliked
 function CardActions({id, receiveAction}) {
     return (
         <CardButtonContainer>
-            <CardDislikedButton onTap={() => receiveAction(id, 'disliked')}/>
-            <CardSuperlikedButton onTap={() => receiveAction(id, 'superliked')} />
-            <CardLikedButton onTap={() => receiveAction(id, 'liked')} />
+            <CardDislikedButton onClick={() => receiveAction(id, 'disliked')}/>
+            <CardSuperlikedButton onClick={() => receiveAction(id, 'superliked')} />
+            <CardLikedButton onClick={() => receiveAction(id, 'liked')} />
         </CardButtonContainer>
     );
 }

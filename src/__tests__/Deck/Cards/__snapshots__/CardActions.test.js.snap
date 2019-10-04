@@ -3,13 +3,13 @@
 exports[`CardActions component renders correctly 1`] = `
 <styled.div>
   <Styled(Styled(Component))
-    onTap={[Function]}
+    onClick={[Function]}
   />
   <Styled(Styled(Component))
-    onTap={[Function]}
+    onClick={[Function]}
   />
   <Styled(Component)
-    onTap={[Function]}
+    onClick={[Function]}
   />
 </styled.div>
 `;

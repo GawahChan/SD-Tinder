@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://GawahChan.github.io/SD-Tinder",
   "dependencies": {
-    "framer-motion": "^1.6.7",
+    "framer-motion": "^1.6.8",
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

@@ -32,7 +32,7 @@ describe('CardActions component', () => {
         it('disliked button calls `receiveAction` prop', () => {
             let action = 'disliked'
 
-            cardActions.find(CardDislikedButton).props().onTap();
+            cardActions.find(CardDislikedButton).simulate('click');
 
             expect(mockReceiveAction).toHaveBeenCalledTimes(1);
             expect(mockReceiveAction).toHaveBeenCalledWith(id, action);
@@ -41,7 +41,7 @@ describe('CardActions component', () => {
         it('superliked button calls `receiveAction` prop', () => {
             let action = 'superliked'
 
-            cardActions.find(CardSuperlikedButton).props().onTap();
+            cardActions.find(CardSuperlikedButton).simulate('click');
 
             expect(mockReceiveAction).toHaveBeenCalledTimes(1);
             expect(mockReceiveAction).toHaveBeenCalledWith(id, action);
@@ -50,7 +50,7 @@ describe('CardActions component', () => {
         it('liked button calls `receiveAction` prop', () => {
             let action = 'liked'
 
-            cardActions.find(CardLikedButton).props().onTap();
+            cardActions.find(CardLikedButton).simulate('click');
 
             expect(mockReceiveAction).toHaveBeenCalledTimes(1);
             expect(mockReceiveAction).toHaveBeenCalledWith(id, action);
