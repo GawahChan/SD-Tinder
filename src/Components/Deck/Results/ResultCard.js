@@ -1,12 +1,15 @@
-import React from 'react';
-import {ResultProfile, ResultTitle} from './style';
+import React from "react";
+import { Title } from "../../../Common/Styled/Typography.styles";
+import { ResultProfile, Container } from "./style";
 
 function ResultCard(props) {
-    return (
-        <ResultProfile img={props.img}>
-            <ResultTitle>{props.name}</ResultTitle>
-        </ResultProfile>
-    );
+  return (
+    <ResultProfile img={props.img}>
+      <Container>
+        <Title>{props.name}</Title>
+      </Container>
+    </ResultProfile>
+  );
 }
 
 export default ResultCard;
