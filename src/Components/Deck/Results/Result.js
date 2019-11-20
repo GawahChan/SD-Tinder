@@ -1,15 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ResultCard from "./ResultCard";
 import { Title, Subtitle } from "../../../Common/Styled/Typography.styles";
 import { ResultDisplay, Container } from "./style";
 
-function Result(props) {
+function Result({ title, stuntDouble, subTitle }) {
   return (
     <Container>
-      <Title>{props.title}</Title>
+      <Title>{title}</Title>
       <ResultDisplay>
-        {props.stuntDouble.length > 0 ? (
-          props.stuntDouble.map(stuntDouble => {
+        {stuntDouble.length > 0 ? (
+          stuntDouble.map(stuntDouble => {
             return (
               <ResultCard
                 key={stuntDouble.id}
@@ -19,11 +20,17 @@ function Result(props) {
             );
           })
         ) : (
-          <Subtitle>{props.subTitle}</Subtitle>
+          <Subtitle>{subTitle}</Subtitle>
         )}
       </ResultDisplay>
     </Container>
   );
 }
+
+Result.propTypes = {
+  title: PropTypes.string,
+  stuntDouble: PropTypes.array,
+  subTitle: PropTypes.string
+};
 
 export default Result;
