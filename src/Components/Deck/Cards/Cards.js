@@ -1,24 +1,28 @@
-import React from 'react';
-import Card from './Card';
+import React from "react";
+import PropTypes from "prop-types";
+import Card from "./Card";
 
-import { CardsContainer } from './style';
+import { CardsContainer } from "./style";
 
-function Cards(props) {
-    return (
-        <CardsContainer>
-            {
-                props.stuntDoubleList.map(stuntDouble => {
-                    return (
-                        <Card
-                            key={stuntDouble.id}
-                            stuntDouble={stuntDouble}
-                            handleAction={props.handleAction}
-                        />
-                    );
-                })
-            }
-        </CardsContainer>
-    );
+function Cards({ stuntDoubleList, handleAction }) {
+  return (
+    <CardsContainer>
+      {stuntDoubleList.map(stuntDouble => {
+        return (
+          <Card
+            key={stuntDouble.id}
+            stuntDouble={stuntDouble}
+            handleAction={handleAction}
+          />
+        );
+      })}
+    </CardsContainer>
+  );
 }
+
+Cards.propTypes = {
+  stuntDoubleList: PropTypes.array,
+  handleAction: PropTypes.func
+};
 
 export default Cards;

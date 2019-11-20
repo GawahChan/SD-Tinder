@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import PropTypes from "prop-types";
 import {
   CardContents,
   CardOverlay,
@@ -79,4 +79,9 @@ class CardDisplay extends Component {
   }
 }
 
+CardDisplay.propTypes = {
+  stuntDouble: PropTypes.object,
+  animateAction: PropTypes.func,
+  action: PropTypes.string
+};
 export default CardDisplay;
