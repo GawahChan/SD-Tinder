@@ -8,7 +8,7 @@ import Results from "./Components/Results/Results";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <GlobalStyle />
         <Menu />
