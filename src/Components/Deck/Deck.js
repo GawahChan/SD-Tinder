@@ -1,50 +1,63 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import {
+  removeStuntDouble,
+  addStuntDouble
+} from "../../Store/Actions/actionTypes";
+
 import Results from "./Results/Results";
-import Cards from "./Cards/Cards";
-import Data from "../../Data.js";
+import Card from "./Cards/Card";
+
+import { CardsContainer } from "./Cards/style";
 
 class Deck extends Component {
-  constructor() {
-    super();
-    this.state = {
-      stuntDoubleList: Data,
-      superliked: [],
-      liked: [],
-      disliked: []
-    };
-  }
-
   handleAction = (id, action) => {
-    let actionState = [...this.state[action]];
-    let filtered = this.state.stuntDoubleList.find(
-      stuntDouble => stuntDouble.id === id
-    );
-    actionState.unshift(filtered);
-
-    let stuntDoubleList = this.state.stuntDoubleList.filter(
-      stuntDouble => stuntDouble.id !== id
-    );
-
     setTimeout(() => {
-      this.setState({ [action]: actionState, stuntDoubleList });
+      this.props.addStuntDouble(id, action);
+      this.props.removeStuntDouble(id);
     }, 500);
   };
 
   render() {
-    const { stuntDoubleList, liked, superliked, disliked } = this.state;
+    const { stuntDoublesList } = this.props;
     return (
       <div>
-        {stuntDoubleList.length > 0 ? (
-          <Cards
-            stuntDoubleList={stuntDoubleList}
-            handleAction={this.handleAction}
-          />
+        {stuntDoublesList.length > 0 ? (
+          <CardsContainer>
+            {stuntDoublesList.map(stuntDouble => {
+              return (
+                <Card
+                  key={stuntDouble.id}
+                  stuntDouble={stuntDouble}
+                  handleAction={this.handleAction}
+                />
+              );
+            })}
+          </CardsContainer>
         ) : (
-          <Results superliked={superliked} liked={liked} disliked={disliked} />
+          <Results />
         )}
       </div>
     );
   }
 }
 
-export default Deck;
+Deck.propTypes = {
+  stuntDoublesList: PropTypes.array,
+  removeStuntDouble: PropTypes.func,
+  addStuntDOuble: PropTypes.func
+};
+
+const mapStateToProps = state => {
+  return {
+    stuntDoublesList: state.stuntDoubles
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ removeStuntDouble, addStuntDouble }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Deck);
