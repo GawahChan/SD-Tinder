@@ -1,22 +1,34 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
 import { CardContainer } from "./style";
 import CardDisplay from "./CardDisplay";
 
+import {
+  INITIAL_CARD_POSITION,
+  REMOVE_LIKED_ANIMATION,
+  REMOVE_DISLIKED_ANIMATION,
+  REMOVE_SUPERLIKED_ANIMATION,
+  DISPLAY_SUPERLIKED_BOUNDARY,
+  DISPLAY_LIKED_BOUNDARY,
+  DISPLAY_DISLIKED_BOUNDARY,
+  REMOVE_SUPERLIKED_BOUNDARY,
+  REMOVE_LIKED_BOUNDARY,
+  REMOVE_DISLIKED_BOUNDARY
+} from "../../../Constants";
+
 const Card = ({ stuntDouble, handleAction }) => {
   const [action, setAction] = useState("");
-  const [removeCard, setRemoveCard] = useState(false);
+  const [removeCard, setRemoveCard] = useState(INITIAL_CARD_POSITION);
 
   const animateAction = (id, action) => {
     let removeCard =
       action === "liked"
-        ? { x: 400, opacity: 0 }
+        ? REMOVE_LIKED_ANIMATION
         : action === "disliked"
-        ? { x: -400, opacity: 0 }
+        ? REMOVE_DISLIKED_ANIMATION
         : action === "superliked"
-        ? { y: -400, opacity: 0 }
-        : { x: 0, y: 0 };
+        ? REMOVE_SUPERLIKED_ANIMATION
+        : INITIAL_CARD_POSITION;
 
     setAction(action);
     setRemoveCard(removeCard);
@@ -29,11 +41,11 @@ const Card = ({ stuntDouble, handleAction }) => {
     let yPosition = info.point.y;
 
     let action =
-      xPosition > 50
+      xPosition > DISPLAY_LIKED_BOUNDARY
         ? "liked"
-        : xPosition < -50
+        : xPosition < DISPLAY_DISLIKED_BOUNDARY
         ? "disliked"
-        : yPosition < -50
+        : yPosition < DISPLAY_SUPERLIKED_BOUNDARY
         ? "superliked"
         : "";
 
@@ -44,11 +56,11 @@ const Card = ({ stuntDouble, handleAction }) => {
     let xPosition = info.point.x;
     let yPosition = info.point.y;
 
-    return xPosition > 80
+    return xPosition > REMOVE_LIKED_BOUNDARY
       ? animateAction(id, "liked")
-      : xPosition < -80
+      : xPosition < REMOVE_DISLIKED_BOUNDARY
       ? animateAction(id, "disliked")
-      : yPosition < -80
+      : yPosition < REMOVE_SUPERLIKED_BOUNDARY
       ? animateAction(id, "superliked")
       : setAction("");
   };
@@ -60,7 +72,9 @@ const Card = ({ stuntDouble, handleAction }) => {
       dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
       onDrag={(e, info) => handleDrag(info)}
       onDragEnd={(e, info) => handleDragEnd(stuntDouble.id, info)}
-      animate={removeCard}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={removeCard}
       actionColour={action}
     >
       <CardDisplay
