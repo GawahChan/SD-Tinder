@@ -10,14 +10,13 @@ import {
 import Results from "./Results/Results";
 import Card from "./Cards/Card";
 
+import { AnimatePresence } from "framer-motion";
 import { CardsContainer } from "./Cards/style";
 
 class Deck extends Component {
   handleAction = (id, action) => {
-    setTimeout(() => {
-      this.props.addStuntDouble(id, action);
-      this.props.removeStuntDouble(id);
-    }, 500);
+    this.props.addStuntDouble(id, action);
+    this.props.removeStuntDouble(id);
   };
 
   render() {
@@ -26,15 +25,17 @@ class Deck extends Component {
       <div>
         {stuntDoublesList.length > 0 ? (
           <CardsContainer>
-            {stuntDoublesList.map(stuntDouble => {
-              return (
-                <Card
-                  key={stuntDouble.id}
-                  stuntDouble={stuntDouble}
-                  handleAction={this.handleAction}
-                />
-              );
-            })}
+            <AnimatePresence>
+              {stuntDoublesList.map(stuntDouble => {
+                return (
+                  <Card
+                    key={stuntDouble.id}
+                    stuntDouble={stuntDouble}
+                    handleAction={this.handleAction}
+                  />
+                );
+              })}
+            </AnimatePresence>
           </CardsContainer>
         ) : (
           <Results />
