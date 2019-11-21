@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "badd9805239ce8dcee22a0fe4638acce",
+    "revision": "bb652476eca36a43aaee2979a2b55d42",
     "url": "/SD-Tinder/index.html"
   },
   {
-    "revision": "4b4be63e6d75ce82eb45",
-    "url": "/SD-Tinder/static/js/2.49c74eb0.chunk.js"
+    "revision": "ca18aad34c40ad955232",
+    "url": "/SD-Tinder/static/js/2.f7f98328.chunk.js"
   },
   {
-    "revision": "089491ea9ea30181640a",
-    "url": "/SD-Tinder/static/js/main.23c68f95.chunk.js"
+    "revision": "20e4a3095f50398830e6",
+    "url": "/SD-Tinder/static/js/main.0c600ea5.chunk.js"
   },
   {
     "revision": "fa2c1db2f52de1fb3b42",
@@ -62,6 +62,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5a433b84db1758f73a1181036b045e5d",
     "url": "/SD-Tinder/static/media/liked.5a433b84.svg"
+  },
+  {
+    "revision": "ed2d59dcf0fe1dc37aeddd8324c8256e",
+    "url": "/SD-Tinder/static/media/menu.ed2d59dc.svg"
   },
   {
     "revision": "b5e8710ba4078de63c4c605417d4f09d",
