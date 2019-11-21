@@ -33,6 +33,7 @@ export const CardContainer = styled(motion.div).attrs(props => ({
   position: absolute;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
 
   width: 320px;
   height: 480px;
