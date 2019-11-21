@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Title } from "../../../Common/Styled/Typography.styles";
+import { Title } from "../../Common/Styled/Typography.styles";
 import { ResultProfile, Container } from "./style";
 
 function ResultCard({ img, name }) {

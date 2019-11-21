@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 import Result from "./Result";
-import { Header } from "../../../Common/Styled/Typography.styles";
+import { Header } from "../../Common/Styled/Typography.styles";
 import { ResultsContainer } from "./style";
 
 class Results extends Component {

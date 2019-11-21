@@ -14,8 +14,8 @@ import {
   CardLikedButton,
   CardDislikedButton,
   CardSuperlikedButton
-} from "../../../Common/Styled/Icons.styles";
-import { Header, Subtitle } from "../../../Common/Styled/Typography.styles";
+} from "../../Common/Styled/Icons.styles";
+import { Header, Subtitle } from "../../Common/Styled/Typography.styles";
 
 const CardDisplay = ({ stuntDouble, animateAction, action }) => {
   const [actionType, setActionType] = useState("");

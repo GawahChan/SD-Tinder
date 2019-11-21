@@ -15,3 +15,7 @@ export const Subtitle = styled(Header)`
   font-size: 1rem;
   margin: 0;
 `;
+
+export const MenuText = styled(Header)`
+  color: black;
+`;

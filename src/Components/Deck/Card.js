@@ -14,7 +14,7 @@ import {
   REMOVE_SUPERLIKED_BOUNDARY,
   REMOVE_LIKED_BOUNDARY,
   REMOVE_DISLIKED_BOUNDARY
-} from "../../../Constants";
+} from "../../Constants";
 
 const Card = ({ stuntDouble, handleAction }) => {
   const [action, setAction] = useState("");
