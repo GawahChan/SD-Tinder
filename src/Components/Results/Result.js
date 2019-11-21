@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ResultCard from "./ResultCard";
-import { Title, Subtitle } from "../../../Common/Styled/Typography.styles";
+import { Title, Subtitle } from "../../Common/Styled/Typography.styles";
 import { ResultDisplay, Container } from "./style";
 
 function Result({ title, stuntDouble, subTitle }) {

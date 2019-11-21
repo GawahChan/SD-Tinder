@@ -7,6 +7,7 @@ export const CardsContainer = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex: 1;
 `;
 // eslint-disable-next-line
 export const CardContainer = styled(motion.div).attrs(props => ({
@@ -51,7 +52,7 @@ export const CardContents = styled(motion.div)`
   justify-content: flex-end;
 
   background-image: ${props =>
-    `url(${require(`../../../Common/Profile/${props.img}.jpg`)})`};
+    `url(${require(`../../Common/Profile/${props.img}.jpg`)})`};
   background-position: top;
   background-size: cover;
 

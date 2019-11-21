@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -7,11 +8,10 @@ import {
   addStuntDouble
 } from "../../Store/Actions/actionTypes";
 
-import Results from "./Results/Results";
-import Card from "./Cards/Card";
+import Card from "./Card";
 
 import { AnimatePresence } from "framer-motion";
-import { CardsContainer } from "./Cards/style";
+import { CardsContainer } from "./style";
 
 class Deck extends Component {
   handleAction = (id, action) => {
@@ -38,7 +38,7 @@ class Deck extends Component {
             </AnimatePresence>
           </CardsContainer>
         ) : (
-          <Results />
+          <Redirect to="/results" />
         )}
       </div>
     );

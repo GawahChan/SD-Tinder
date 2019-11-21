@@ -9,7 +9,8 @@ export const ResultsContainer = styled.div`
   min-height: 100vh;
 
   text-align: center;
-  margin: 30px;
+  box-sizing: border-box;
+  padding: 30px;
 `;
 
 export const ResultDisplay = styled.div`
@@ -21,7 +22,7 @@ export const ResultDisplay = styled.div`
 export const ResultProfile = styled.div`
   background-image: ${props => {
     return `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,1)),
-            url(${require(`../../../Common/Profile/${props.img}.jpg`)})     `;
+            url(${require(`../../Common/Profile/${props.img}.jpg`)})     `;
   }};
 
   border-radius: 10px;
