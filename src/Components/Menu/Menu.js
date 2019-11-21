@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MenuButton } from "../../Common/Styled/Icons.styles";
-import { MenuText } from "../../Common/Styled/Typography.styles";
+import { MainHeader, MenuText } from "../../Common/Styled/Typography.styles";
 import {
   MenuContainer,
   MenuPanelContainer,
@@ -17,6 +17,9 @@ const Menu = () => {
       <MenuButton onClick={() => setDisplayMenu(!displayMenu)} />
       <MenuPanelContainer displayMenu={displayMenu}>
         <MenuPanel>
+          <Container>
+            <MainHeader>SD-Tinder</MainHeader>
+          </Container>
           <Container>
             <MenuLink to="/" onClick={() => setDisplayMenu(!displayMenu)}>
               <MenuText>Home</MenuText>

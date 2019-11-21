@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const CardsContainer = styled.div`
+export const CardsContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;

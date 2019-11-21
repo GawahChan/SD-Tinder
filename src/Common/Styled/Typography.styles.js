@@ -19,3 +19,10 @@ export const Subtitle = styled(Header)`
 export const MenuText = styled(Header)`
   color: black;
 `;
+
+export const MainHeader = styled.h1`
+  margin: 0;
+  font-weight: 600;
+  font-size: 3rem;
+  color: #ff6d6d;
+`;
