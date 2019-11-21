@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import {
   CardContents,
@@ -17,67 +17,50 @@ import {
 } from "../../../Common/Styled/Icons.styles";
 import { Header, Subtitle } from "../../../Common/Styled/Typography.styles";
 
-class CardDisplay extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      actionType: "",
-      displayBio: false
-    };
-  }
+const CardDisplay = ({ stuntDouble, animateAction, action }) => {
+  const [actionType, setActionType] = useState("");
+  const [displayBio, setDisplayBio] = useState(false);
 
-  receiveAction = (id, actionType) => {
-    this.props.animateAction(id, actionType);
-    this.setState({ actionType });
+  const receiveAction = (id, actionType) => {
+    animateAction(id, actionType);
+    setActionType(actionType);
   };
 
-  toggleBio = () => this.setState({ displayBio: !this.state.displayBio });
+  const toggleBio = () => setDisplayBio(!displayBio);
 
-  render() {
-    const overlay = this.state.actionType
-      ? this.state.actionType.toUpperCase()
-      : this.props.action.toUpperCase();
+  const overlay = actionType ? actionType.toUpperCase() : action.toUpperCase();
 
-    return (
-      <CardContents actionColour={overlay} img={this.props.stuntDouble.img}>
-        <CardOverlay actionColour={overlay}>{overlay}</CardOverlay>
-        <CardContent>
-          <Container>
-            <Header>
-              {this.props.stuntDouble.name}, {this.props.stuntDouble.age}
-            </Header>
-            <CardSubtitleContainer>
-              <Subtitle>{this.props.stuntDouble.location}</Subtitle>
-              <CardInfoButton onTap={this.toggleBio} />
-            </CardSubtitleContainer>
-            {this.state.displayBio && (
-              <Subtitle>{this.props.stuntDouble.bio}</Subtitle>
-            )}
-          </Container>
-          <Container>
-            <CardButtonContainer>
-              <CardDislikedButton
-                onClick={() =>
-                  this.receiveAction(this.props.stuntDouble.id, "disliked")
-                }
-              />
-              <CardSuperlikedButton
-                onClick={() =>
-                  this.receiveAction(this.props.stuntDouble.id, "superliked")
-                }
-              />
-              <CardLikedButton
-                onClick={() =>
-                  this.receiveAction(this.props.stuntDouble.id, "liked")
-                }
-              />
-            </CardButtonContainer>
-          </Container>
-        </CardContent>
-      </CardContents>
-    );
-  }
-}
+  return (
+    <CardContents actionColour={overlay} img={stuntDouble.img}>
+      <CardOverlay actionColour={overlay}>{overlay}</CardOverlay>
+      <CardContent>
+        <Container>
+          <Header>
+            {stuntDouble.name}, {stuntDouble.age}
+          </Header>
+          <CardSubtitleContainer>
+            <Subtitle>{stuntDouble.location}</Subtitle>
+            <CardInfoButton onTap={toggleBio} />
+          </CardSubtitleContainer>
+          {displayBio && <Subtitle>{stuntDouble.bio}</Subtitle>}
+        </Container>
+        <Container>
+          <CardButtonContainer>
+            <CardDislikedButton
+              onClick={() => receiveAction(stuntDouble.id, "disliked")}
+            />
+            <CardSuperlikedButton
+              onClick={() => receiveAction(stuntDouble.id, "superliked")}
+            />
+            <CardLikedButton
+              onClick={() => receiveAction(stuntDouble.id, "liked")}
+            />
+          </CardButtonContainer>
+        </Container>
+      </CardContent>
+    </CardContents>
+  );
+};
 
 CardDisplay.propTypes = {
   stuntDouble: PropTypes.object,
