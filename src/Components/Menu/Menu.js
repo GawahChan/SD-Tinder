@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MenuButton } from "../../Common/Styled/Icons.styles";
 import { MainHeader, MenuText } from "../../Common/Styled/Typography.styles";
+import { HOME_URL, RESULTS_URL } from "../../Constants";
 import {
   MenuContainer,
   MenuPanelContainer,
@@ -21,13 +22,16 @@ const Menu = () => {
             <MainHeader>SD-Tinder</MainHeader>
           </Container>
           <Container>
-            <MenuLink to="/" onClick={() => setDisplayMenu(!displayMenu)}>
+            <MenuLink
+              to={HOME_URL}
+              onClick={() => setDisplayMenu(!displayMenu)}
+            >
               <MenuText>Home</MenuText>
             </MenuLink>
           </Container>
           <Container>
             <MenuLink
-              to="/results"
+              to={RESULTS_URL}
               onClick={() => setDisplayMenu(!displayMenu)}
             >
               <MenuText>Results</MenuText>
