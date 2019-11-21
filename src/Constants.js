@@ -1,3 +1,6 @@
+export const HOME_URL = `${process.env.PUBLIC_URL}/`;
+export const RESULTS_URL = `${process.env.PUBLIC_URL}/results`;
+
 export const INITIAL_CARD_POSITION = { x: 0, y: 0 };
 
 export const REMOVE_LIKED_ANIMATION = {

@@ -13,10 +13,10 @@ function App() {
         <GlobalStyle />
         <Menu />
         <Switch>
-          <Route exact path={process.env.PUBLIC_URL + "/"}>
+          <Route exact path="/">
             <Deck />
           </Route>
-          <Route exact path={process.env.PUBLIC_URL + "/results"}>
+          <Route exact path="/results">
             <Results />
           </Route>
         </Switch>
