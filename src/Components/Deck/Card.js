@@ -75,6 +75,7 @@ const Card = ({ stuntDouble, handleAction }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={removeCard}
+      transition={{ duration: 0.5 }}
       actionColour={action}
     >
       <CardDisplay
