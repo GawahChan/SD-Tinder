@@ -10,6 +10,8 @@ const superliked = (state = [], action) => {
         updatedState.unshift(filtered);
         return updatedState;
       } else return state;
+    case constants.RESET_ALLSTUNTDOUBLES:
+      return [];
     default:
       return state;
   }

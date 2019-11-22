@@ -14,3 +14,7 @@ export const addStuntDouble = (stuntDoubleIndex, actionType) => {
     actionType
   };
 };
+
+export const resetAllStuntDoubles = () => {
+  return { type: constants.RESET_ALLSTUNTDOUBLES };
+};
