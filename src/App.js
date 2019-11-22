@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { HOME_URL, RESULTS_URL } from "./Constants";
 
 import { GlobalStyle } from "./App.styles";
 import Menu from "./Components/Menu/Menu";
@@ -8,15 +9,15 @@ import Results from "./Components/Results/Results";
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <div>
         <GlobalStyle />
         <Menu />
         <Switch>
-          <Route exact path="/">
+          <Route exact path={HOME_URL}>
             <Deck />
           </Route>
-          <Route exact path="/results">
+          <Route exact path={RESULTS_URL}>
             <Results />
           </Route>
         </Switch>

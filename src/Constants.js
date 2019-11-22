@@ -1,5 +1,5 @@
-export const HOME_URL = `${process.env.PUBLIC_URL}/`;
-export const RESULTS_URL = `${process.env.PUBLIC_URL}/results`;
+export const HOME_URL = `/`;
+export const RESULTS_URL = `/results`;
 
 export const INITIAL_CARD_POSITION = { x: 0, y: 0 };
 

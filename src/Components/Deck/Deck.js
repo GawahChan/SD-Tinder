@@ -9,7 +9,7 @@ import {
 } from "../../Store/Actions/actionTypes";
 
 import Card from "./Card";
-import { HOME_URL } from "../../Constants";
+import { RESULTS_URL } from "../../Constants";
 
 import { AnimatePresence } from "framer-motion";
 import { CardsContainer } from "./style";
@@ -39,7 +39,7 @@ class Deck extends Component {
             </AnimatePresence>
           </CardsContainer>
         ) : (
-          <Redirect to={HOME_URL} />
+          <Redirect to={RESULTS_URL} />
         )}
       </div>
     );
