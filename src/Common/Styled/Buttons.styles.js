@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const ResetLink = styled(Link)`
+export const HomeLink = styled(Link)`
   text-decoration: none;
 `;
 
-export const ResetButton = styled.button`
+export const ResultButton = styled.button`
   font-size: 1.5rem;
 
   box-sizing: border-box;
