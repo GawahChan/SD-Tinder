@@ -7,8 +7,8 @@ import { resetAllStuntDoubles } from "../../Store/Actions/actionTypes";
 import Result from "./Result";
 import { HOME_URL } from "../../Constants";
 import { Header } from "../../Common/Styled/Typography.styles";
-import { ResetLink, ResetButton } from "../../Common/Styled/Buttons.styles";
-import { ResultsContainer, Container } from "./style";
+import { HomeLink, ResultButton } from "../../Common/Styled/Buttons.styles";
+import { ResultsPageContainer, ResultsContainer, Container } from "./style";
 
 class Results extends Component {
   render() {
@@ -20,38 +20,60 @@ class Results extends Component {
       resetAllStuntDoubles
     } = this.props;
 
+    const showResult =
+      superliked.length > 0 || liked.length > 0 || disliked.length > 0;
+
+    const HeaderText =
+      stuntDoublesList.length > 0
+        ? `You never know who you might meet`
+        : `There's no one new around you`;
+
+    const ButtonText =
+      stuntDoublesList.length === 0
+        ? `Reset all profiles`
+        : showResult
+        ? "Carry on swiping"
+        : `Start swiping now!`;
+
     return (
-      <ResultsContainer>
+      <ResultsPageContainer>
         <Container>
+          <Header>{HeaderText}</Header>
           <Container>
             {stuntDoublesList.length > 0 ? (
-              <Header>Keep swiping, you never know who you might meet!</Header>
+              <HomeLink to={HOME_URL}>
+                <ResultButton>{ButtonText}</ResultButton>
+              </HomeLink>
             ) : (
-              <Header>There's no one new around you</Header>
+              <HomeLink to={HOME_URL} onClick={() => resetAllStuntDoubles()}>
+                <ResultButton>{ButtonText}</ResultButton>
+              </HomeLink>
             )}
           </Container>
-          <Container>
-            <ResetLink to={HOME_URL} onClick={() => resetAllStuntDoubles()}>
-              <ResetButton>Reset profiles and swipe again!</ResetButton>
-            </ResetLink>
-          </Container>
         </Container>
-        <Result
-          title={"People you superliked!"}
-          stuntDouble={superliked}
-          subTitle={"You didn't superlike anyone..."}
-        />
-        <Result
-          title={"People you liked... let's hope they like you too!"}
-          stuntDouble={liked}
-          subTitle={"You didn't like anyone..."}
-        />
-        <Result
-          title={"People you disliked"}
-          stuntDouble={disliked}
-          subTitle={"Cast a wide net they said..."}
-        />
-      </ResultsContainer>
+        {showResult && (
+          <ResultsContainer>
+            <Result
+              id="superliked"
+              title={"People you superliked!"}
+              stuntDouble={superliked}
+              subTitle={"You didn't superlike anyone..."}
+            />
+            <Result
+              id="liked"
+              title={"People you liked... let's hope they like you too!"}
+              stuntDouble={liked}
+              subTitle={"You didn't like anyone..."}
+            />
+            <Result
+              id="disliked"
+              title={"People you disliked"}
+              stuntDouble={disliked}
+              subTitle={"Cast a wide net they said..."}
+            />
+          </ResultsContainer>
+        )}
+      </ResultsPageContainer>
     );
   }
 }

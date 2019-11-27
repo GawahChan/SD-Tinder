@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ResultsContainer = styled.div`
+export const ResultsPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -13,10 +13,30 @@ export const ResultsContainer = styled.div`
   padding: 30px;
 `;
 
+export const ResultsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  flex: 1;
+`;
+
+export const ResultContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px;
+  flex: 1;
+`;
+
 export const ResultDisplay = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
 `;
 
 export const ResultProfile = styled.div`
@@ -26,7 +46,8 @@ export const ResultProfile = styled.div`
   }};
 
   border-radius: 10px;
-  box-shadow: 1px 1px 8px #333;
+  border: ${props => props.theme.border};
+  box-shadow: ${props => props.theme.shadow};
   margin: 10px;
 
   background-size: cover;
