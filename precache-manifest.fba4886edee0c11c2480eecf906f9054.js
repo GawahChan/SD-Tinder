@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b1a5b1f0a09a6bf1da5de165b1dc766f",
+    "revision": "56722a6cf72fd992c66ef7c181eb3b0f",
     "url": "/SD-Tinder/index.html"
   },
   {
-    "revision": "10eb944f6dc50d85ebd2",
-    "url": "/SD-Tinder/static/js/2.0a9b99aa.chunk.js"
+    "revision": "64cded251c3689eb959f",
+    "url": "/SD-Tinder/static/js/2.3b0709dc.chunk.js"
   },
   {
-    "revision": "93a36973a0f6972aaac1",
-    "url": "/SD-Tinder/static/js/main.608194d1.chunk.js"
+    "revision": "fd818a9c5f6192708db6",
+    "url": "/SD-Tinder/static/js/main.231c78c9.chunk.js"
   },
   {
     "revision": "fa2c1db2f52de1fb3b42",
