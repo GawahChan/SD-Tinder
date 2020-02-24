@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { HOME_URL, DECK_URL } from "./Constants";
 
 import { GlobalStyle } from "./App.styles";
