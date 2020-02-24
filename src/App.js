@@ -1,6 +1,6 @@
 import React from "react";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import { HOME_URL, RESULTS_URL } from "./Constants";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HOME_URL, DECK_URL } from "./Constants";
 
 import { GlobalStyle } from "./App.styles";
 import Menu from "./Components/Menu/Menu";
@@ -15,10 +15,10 @@ function App() {
         <Menu />
         <Switch>
           <Route exact path={HOME_URL}>
-            <Deck />
-          </Route>
-          <Route exact path={RESULTS_URL}>
             <Results />
+          </Route>
+          <Route exact path={DECK_URL}>
+            <Deck />
           </Route>
         </Switch>
       </div>

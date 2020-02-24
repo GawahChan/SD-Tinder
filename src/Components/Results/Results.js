@@ -5,7 +5,7 @@ import { bindActionCreators } from "redux";
 import { resetAllStuntDoubles } from "../../Store/Actions/actionTypes";
 
 import Result from "./Result";
-import { HOME_URL } from "../../Constants";
+import { DECK_URL } from "../../Constants";
 import { Header } from "../../Common/Styled/Typography.styles";
 import { HomeLink, ResultButton } from "../../Common/Styled/Buttons.styles";
 import { ResultsPageContainer, ResultsContainer, Container } from "./style";
@@ -25,7 +25,7 @@ class Results extends Component {
 
     const HeaderText =
       stuntDoublesList.length > 0
-        ? `You never know who you might meet`
+        ? `You never know who you might meet...`
         : `There's no one new around you`;
 
     const ButtonText =
@@ -41,11 +41,11 @@ class Results extends Component {
           <Header>{HeaderText}</Header>
           <Container>
             {stuntDoublesList.length > 0 ? (
-              <HomeLink to={HOME_URL}>
+              <HomeLink to={DECK_URL}>
                 <ResultButton>{ButtonText}</ResultButton>
               </HomeLink>
             ) : (
-              <HomeLink to={HOME_URL} onClick={() => resetAllStuntDoubles()}>
+              <HomeLink to={DECK_URL} onClick={() => resetAllStuntDoubles()}>
                 <ResultButton>{ButtonText}</ResultButton>
               </HomeLink>
             )}
