@@ -74,6 +74,7 @@ const Card = ({ stuntDouble, handleAction }) => {
       onDragEnd={(e, info) => handleDragEnd(stuntDouble.id, info)}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      positionTransition
       exit={removeCard}
       transition={{ duration: 0.5 }}
       actionColour={action}
