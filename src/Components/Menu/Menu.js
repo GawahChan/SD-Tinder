@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MenuButton } from "../../Common/Styled/Icons.styles";
 import { MainHeader, MenuText } from "../../Common/Styled/Typography.styles";
-import { HOME_URL, DECK_URL } from "../../Constants";
+import { HOME_URL, DECK_URL, ABOUT_URL } from "../../Constants";
 import {
   MenuContainer,
   MenuPanelContainer,
@@ -35,6 +35,14 @@ const Menu = () => {
               onClick={() => setDisplayMenu(!displayMenu)}
             >
               <MenuText>Discover</MenuText>
+            </MenuLink>
+          </Container>
+          <Container>
+            <MenuLink
+              to={ABOUT_URL}
+              onClick={() => setDisplayMenu(!displayMenu)}
+            >
+              <MenuText>About</MenuText>
             </MenuLink>
           </Container>
         </MenuPanel>
