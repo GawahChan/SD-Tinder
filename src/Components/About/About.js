@@ -28,11 +28,55 @@ const About = () => {
         This project uses the following:
         <AboutList>
           <li>JavaScript throughout the project</li>
-          <li>Create React App</li>
-          <li>PropTypes for declaring props</li>
-          <li>Styled components for custom/re-usable stylings</li>
-          <li>Redux for state management</li>
-          <li>Framer-Motion for implementing gestures and animations</li>
+          <li>
+            <a
+              href="https://github.com/facebook/create-react-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Create React App
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/facebook/prop-types"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PropTypes
+            </a>{" "}
+            for declaring props
+          </li>
+          <li>
+            <a
+              href="https://styled-components.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Styled components
+            </a>{" "}
+            for custom/re-usable stylings
+          </li>
+          <li>
+            <a
+              href="https://redux.js.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Redux
+            </a>{" "}
+            for state management
+          </li>
+          <li>
+            <a
+              href="https://www.framer.com/motion/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Framer-Motion
+            </a>{" "}
+            for implementing gestures and animations
+          </li>
         </AboutList>
       </AboutParagraph>
       <AboutParagraph>
