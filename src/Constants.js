@@ -1,5 +1,6 @@
-export const HOME_URL = `/`;
-export const DECK_URL = `/discover`;
+export const HOME_URL = "/";
+export const DECK_URL = "/discover";
+export const ABOUT_URL = "/about";
 
 export const INITIAL_CARD_POSITION = { x: 0, y: 0 };
 
