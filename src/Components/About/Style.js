@@ -6,18 +6,18 @@ export const AboutContainer = styled.div`
   align-items: center;
 
   min-height: 100vh;
-  padding: 2rem 3rem 2rem 3rem;
+  padding: 2rem;
 `;
 
 export const AboutHeader = styled.h1`
   font-weight: 400;
-  font-size: 5rem;
+  font-size: 3.5rem;
   color: white;
 `;
 
 export const AboutParagraph = styled.p`
+  margin: 1rem;
   font-weight: 400;
-  font-size: 1.5rem;
   color: white;
   text-align: center;
 `;
